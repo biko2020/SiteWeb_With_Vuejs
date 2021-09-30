@@ -1,14 +1,14 @@
 <template>
-  <AboutApp />
+  <ContactApp />
 </template>
 
 <script>
-import AboutApp from "../components/AboutApp.vue";
+import ContactApp from "../components/ContactApp.vue";
 
 export default {
-  name: "About",
+  name: "Contact",
   components: {
-    AboutApp,
+    ContactApp,
   },
 };
 </script>
