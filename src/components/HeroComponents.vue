@@ -106,13 +106,13 @@ explosive,</p>
                     <p class="txt-blanc">La qualité et la rigueur dans la conception de nos systèmes vous assurent une combinaison parfaite sollicitant les capacités maximales de chaque composante </p>
                 </div>
                 <div class="col-12 col-sm-6 col-md-4 px-4 mb-5">
-                    <img class="mb-3 mb-sm-5 img-fluid" src="@/assets/images/img-pneumatique2.jpg">
+                    <img class="mb-3 mb-sm-5 img-fluid" src="@/assets/images/img-pneumatique2.png">
                     <h4 class="txt-bleu-ciel separateur-left">ASSEMBLAGE FIABLE ET PRÉCIS</h4>
                     <p class="txt-blanc">Bien assemblé. Parfaitement calibré. Nos systèmes pneumatiques sont fabriqués avec un souci du détail qui vous procure des gains d’efficacité.</p>
 
                 </div>
                 <div class="col-12 col-sm-6 col-md-4 px-4 mb-5">
-                    <img class="mb-3 mb-sm-5 img-fluid" src="@/assets/images/img-pneumatique3.jpg">
+                    <img class="mb-3 mb-sm-5 img-fluid" src="@/assets/images/img-pneumatique3.png">
                     <h4 class="txt-bleu-ciel separateur-left">INSTALLATION IRRÉPROCHABLE</h4>
                     <p class="txt-blanc">La mise en route de vos systèmes pneumatiques est profitable. Nos experts sont sur place et collaborent avec vous jusqu’à la toute fin, et même après.</p>
 
@@ -124,8 +124,14 @@ explosive,</p>
 
                 </div>
                 <div class="col-12 col-sm-6 col-md-4 mr-auto-sm px-4 mb-5">
-                    <img class="mb-3 mb-sm-5 img-fluid" src="@/assets/images/img-pneumatique5.jpg">
+                    <img class="mb-3 mb-sm-5 img-fluid" src="@/assets/images/img-pneumatique5.png">
                     <h4 class="txt-bleu-ciel separateur-left">PIÈCES LIVRÉES RAPIDEMENT</h4>
+                    <p class="txt-blanc">Le plus grand inventaire de pièces pneumatiques dans l’est du Canada, prêtes à être livrées rapidement.</p>
+
+                </div>
+                <div class="col-12 col-sm-6 col-md-4 mr-auto-sm px-4 mb-5">
+                    <img class="mb-3 mb-sm-5 img-fluid" src="@/assets/images/img-pneumatique6.jpg">
+                    <h4 class="txt-bleu-ciel separateur-left">QUALITE DE PRODUITS</h4>
                     <p class="txt-blanc">Le plus grand inventaire de pièces pneumatiques dans l’est du Canada, prêtes à être livrées rapidement.</p>
 
                 </div>
@@ -135,7 +141,50 @@ explosive,</p>
     </div>
      <p/> <p/> <p/>
                 </v-row>
-               
+                <v-row class="row text-center pt-md-5 aos-init aos-animate ">
+      <v-col lg="12" class="col-12 align-self-center py-md-5 ">
+        <v-subheader class="text-h4 justify-center">NOS FOURNISSEURS</v-subheader>
+        <p>
+              LES PLUS GRANDES MARQUES DE L’INDUSTRIE SOUS UN MÊME TOIT
+        </p>
+      </v-col>
+    </v-row>
+     <v-row>
+       <div class="container py-5">
+            <div class="row pt-md-5 aos-init aos-animate" data-aos="fade-up">
+
+                <div class="col-12 col-sm-6 col-md-4 px-4 mb-5">
+                    <img class="mb-3 mb-sm-5 img-fluid" src="@/assets/logo/idea.png">                  
+                </div>
+                 <div class="col-12 col-sm-6 col-md-4 px-4 mb-5">
+                    <img class="mb-3 mb-sm-5 img-fluid" src="@/assets/logo/Edibon.jpg">                  
+                </div>
+                 <div class="col-12 col-sm-6 col-md-4 px-4 mb-5">
+                    <img class="mb-3 mb-sm-5 img-fluid" src="@/assets/logo/Lega.png">                  
+                </div>
+                 <div class="col-12 col-sm-6 col-md-4 px-4 mb-5">
+                    <img class="mb-3 mb-sm-5 img-fluid" src="@/assets/logo/semic.png">                  
+                </div>
+                 <div class="col-12 col-sm-6 col-md-4 px-4 mb-5">
+                    <img class="mb-3 mb-sm-5 img-fluid" src="@/assets/logo/alfa.png">                  
+                </div>
+                 <div class="col-12 col-sm-6 col-md-4 px-4 mb-5">
+                    <img class="mb-3 mb-sm-5 img-fluid" src="@/assets/logo/sumakpump.png">                  
+                </div>
+                 <div class="col-12 col-sm-6 col-md-4 px-4 mb-5">
+                    <img class="mb-3 mb-sm-5 img-fluid" src="@/assets/logo/standart.png">                  
+                </div>
+                 <div class="col-12 col-sm-6 col-md-4 px-4 mb-5">
+                    <img class="mb-3 mb-sm-5 img-fluid" src="@/assets/logo/lotus.png">                  
+                </div>
+                <div class="col-12 col-sm-6 col-md-4 px-4 mb-5">
+                    <img class="mb-3 mb-sm-5 img-fluid" src="@/assets/logo/alpha.png">                  
+                </div>
+
+            </div>
+        </div>
+     </v-row>
+  
             </v-container>
              
         </v-content>

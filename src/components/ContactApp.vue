@@ -23,10 +23,10 @@
       <v-col md="4" offset-md="4">
 
         <!---- **** form for e-mail ****----->
-        <v-form action="https://formsubmit.co/90d8b5720842d59ffcdd6b38f8161c0e" method="POST" >
+        <v-form action="@/components/email/sendMail.php" method="POST" >
          
         
-         <input type="hidden" name="_next" value="http://localhost:8080/thanks.html">
+         <input type="hidden" name="_next" value="">
          <input type="hidden" name="_autoresponse" value="Bonjour, nous ne manquerons pas de vous faire un retour , incessamment cordialement">
           <v-text-field v-model="contactinfo.email" name="email" label="E-mail" required placeholder="monmail@gmail.com">
           </v-text-field>
@@ -75,21 +75,6 @@ export default {
   },
 methods:
 {
-
-
-
-  // async validate()
-  // {
-  //    let result = await axios.post(SendEmail, 
-  //    {
-
-  //      Host: "smtp.gmail.com",Username : "brhimlion38@gmail.com",Password : "openyoutube01",To : 'brhimlion38@gmail.com',From : "contactinfo.email",Subject : "contactinfo.message",Body : "contactinfo.message",
-
-  //    }
-  //    );
-  //     console.log(result)
-
-  //  },
 
 
 }

@@ -9,7 +9,43 @@
               LES PLUS GRANDES MARQUES DE L’INDUSTRIE SOUS UN MÊME TOIT
         </p>
       </v-col>
+    </v-row>
+     <v-row>
+       <div class="container py-5">
+            <div class="row pt-md-5 aos-init aos-animate" data-aos="fade-up">
+
+                <div class="col-12 col-sm-6 col-md-4 px-4 mb-5">
+                    <img class="mb-3 mb-sm-5 img-fluid" src="@/assets/logo/idea.png">                  
+                </div>
+                 <div class="col-12 col-sm-6 col-md-4 px-4 mb-5">
+                    <img class="mb-3 mb-sm-5 img-fluid" src="@/assets/logo/Edibon.jpg">                  
+                </div>
+                 <div class="col-12 col-sm-6 col-md-4 px-4 mb-5">
+                    <img class="mb-3 mb-sm-5 img-fluid" src="@/assets/logo/Lega.png">                  
+                </div>
+                 <div class="col-12 col-sm-6 col-md-4 px-4 mb-5">
+                    <img class="mb-3 mb-sm-5 img-fluid" src="@/assets/logo/semic.png">                  
+                </div>
+                 <div class="col-12 col-sm-6 col-md-4 px-4 mb-5">
+                    <img class="mb-3 mb-sm-5 img-fluid" src="@/assets/logo/alfa.png">                  
+                </div>
+                 <div class="col-12 col-sm-6 col-md-4 px-4 mb-5">
+                    <img class="mb-3 mb-sm-5 img-fluid" src="@/assets/logo/sumakpump.png">                  
+                </div>
+                 <div class="col-12 col-sm-6 col-md-4 px-4 mb-5">
+                    <img class="mb-3 mb-sm-5 img-fluid" src="@/assets/logo/standart.png">                  
+                </div>
+                 <div class="col-12 col-sm-6 col-md-4 px-4 mb-5">
+                    <img class="mb-3 mb-sm-5 img-fluid" src="@/assets/logo/lotus.png">                  
+                </div>
+                <div class="col-12 col-sm-6 col-md-4 px-4 mb-5">
+                    <img class="mb-3 mb-sm-5 img-fluid" src="@/assets/logo/alpha.png">                  
+                </div>
+
+            </div>
+        </div>
      </v-row>
+  
      
       <v-row class="row text-center pt-md-5 aos-init aos-animate" >
          
@@ -399,19 +435,19 @@ MSDEF: [
           title: "Instruments Tactiques De Sécurité",
           description:
             "Instruments Tactiques De Sécurité,Équipement Swat,Agent De Sécurité , Find Complete Details about Instruments Tactiques De Sécurité,Équipement ..",
-          images: require("@/assets/images/img_MSD1.jpg"),
+          images: require("@/assets/images/img_MSD1.png"),
         },
         {
           title: "Protège-genou unisexe",
           description:
             "Protège-genou unisexe, accessoires pour policier et infirmières, protection des genoux",
-          images: require("@/assets/images/img_MSD2.jpg"),
+          images: require("@/assets/images/img_MSD2.png"),
         },
         {
           title: "AliExpress Zestawy potężny Zoomable XML ",
           description:
             "AliExpress Zestawy potężny Zoomable XML Q5 Led latarka teleskopowa samoobrona Stick Tactical Baton latarka na",
-          images: require("@/assets/images/img_MSD3.jpg"),
+          images: require("@/assets/images/img_MSD3.png"),
         },
       ],
 
