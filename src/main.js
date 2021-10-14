@@ -3,6 +3,7 @@ import App from './App.vue'
 import router from './router'
 import vuetify from './plugins/vuetify'
 
+
 import Carousel3d from 'vue-carousel-3d';
 Vue.use(Carousel3d);
 

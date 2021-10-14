@@ -23,11 +23,8 @@
       <v-col md="4" offset-md="4">
 
         <!---- **** form for e-mail ****----->
-        <v-form action="@/components/email/sendMail.php" method="POST" >
+        <v-form @submit.prevent="sendEmail" method="post">
          
-        
-         <input type="hidden" name="_next" value="">
-         <input type="hidden" name="_autoresponse" value="Bonjour, nous ne manquerons pas de vous faire un retour , incessamment cordialement">
           <v-text-field v-model="contactinfo.email" name="email" label="E-mail" required placeholder="monmail@gmail.com">
           </v-text-field>
           <v-text-field
@@ -55,8 +52,15 @@
 
 
 <script>
-//import SendEmail from '@/components/email/sendEmail.js';
-// import axios from 'axios';
+
+import Vue from 'vue'
+import axios from 'axios';
+import VueAxios from 'vue-axios';
+//import AxiosPlugin from 'vue-axios-cors';
+ 
+//Vue.use(AxiosPlugin, axios)
+Vue.use(VueAxios, axios)
+
 
 export default {
   name: "Contactus",
@@ -75,7 +79,27 @@ export default {
   },
 methods:
 {
+  sendEmail(e){
+   
+  
+      var option = {
+       headers: {
+              'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8',
+              
+}
+      }
+   
 
+      this.axios.post('https://horizonequipement.ma/src/components/email/sendEmail.php', this.contactinfo, option)
+    
+      .then(function (response){
+        console.log(response);
+      })
+     .catch(function(error){
+       console.log(error);
+     })
+     e.preventDefault();
+ }
 
 }
 
