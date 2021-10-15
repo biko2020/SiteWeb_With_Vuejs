@@ -84,13 +84,13 @@ methods:
   
       var option = {
        headers: {
-              'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8',
-              
-}
+
+              'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8',     
+        }
       }
    
 
-      this.axios.post('https://horizonequipement.ma/src/components/email/sendEmail.php', this.contactinfo, option)
+      this.axios.post('email/sendEmail.php', this.contactinfo, option)
     
       .then(function (response){
         console.log(response);

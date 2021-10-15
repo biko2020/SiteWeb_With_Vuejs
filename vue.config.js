@@ -17,6 +17,6 @@ module.exports = {
       //   }
       // }  
 
- // publicPath: '/dist/',
+ publicPath: '/dist/',
   
  }
