@@ -1,5 +1,5 @@
 <?php
-echo('--------------je suis la ---------');
+
     // Allow from any origin
      if(isset($_SERVER["HTTP_ORIGIN"]))
      {
@@ -30,22 +30,24 @@ echo('--------------je suis la ---------');
         exit(0);
       }
     //From here, handle the request as it is ok
-
+     $email = "";
+     $subject = "";
+     $message = "";
 
      if(!empty($_POST['subject'])){
+
         $email = $_POST['email'];
         $subject = $_POST['subject'];
         $message = $_POST['message'];
      }
+       // number of caracters
+      //$message = wordwrap($message,70);
 
-     $message = "$message";
+      $to = "brahimlion38@gmail.com";
+      $subject = "$subject";
+      $txt = "$message";
+      $headers = "From: <$email>" . "\r\n" .
+      "CC: brahimlion38@gmail.com";
 
-     $to_email = 'aitoufkirbrahimab@gmail.com';
-     $subject = "$subject";
-     $headers[] = 'MIME-Version: 1.0';
-     $headers[] = 'Content-type: text/html; charset=UTF-8';
-     $headers[] = "From: <$email>";
-
-     mail($to_email, $subject, $message, implode("\r\n", $headers));
-
-    ?>
+      mail($to,$subject,$txt,$headers);
+?>

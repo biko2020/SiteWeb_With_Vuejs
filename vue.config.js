@@ -17,6 +17,10 @@ module.exports = {
       //   }
       // }  
 
- publicPath: '/dist/',
+   //publicPath: '/dist/',
+
+   // executer le projet depuis xampp
+   // build with : npm run-script build
+  // publicPath: process.env.MODE_ENV === 'production'? '/horizon/' : '/' 
   
  }

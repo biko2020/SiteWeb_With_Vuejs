@@ -25,17 +25,17 @@
         <!---- **** form for e-mail ****----->
         <v-form @submit.prevent="sendEmail" method="post">
          
-          <v-text-field v-model="contactinfo.email" name="email" label="E-mail" required placeholder="monmail@gmail.com">
+          <v-text-field v-model="contactinfo.email" name="email" label="E-mail" required placeholder="votremail@gmail.com">
           </v-text-field>
           <v-text-field
-            v-model="contactinfo.name"
+            v-model="contactinfo.subject"
             :counter="10"
-            label="Sujet"
+            label="subject"
             name="subject"
             required
           >
           </v-text-field>
-          <v-textarea label="Message" name="message" v-model="contactinfo.message">
+          <v-textarea label="message" name="message" v-model="contactinfo.message">
           </v-textarea>
           <v-btn color="success" class="mr-4" type="submit">
             Envoyer
@@ -70,8 +70,8 @@ export default {
     return {
       
       contactinfo: {
-                  name:'',
                   email:'',
+                  subject:'',
                   message:''
 
         },
