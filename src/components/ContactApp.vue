@@ -23,7 +23,7 @@
       <v-col md="4" offset-md="4">
 
         <!---- **** form for e-mail ****----->
-        <v-form @submit.prevent="sendEmail" method="post">
+        <v-form @submit.prevent="sendEmail">
          
           <v-text-field v-model="contactinfo.email" name="email" label="E-mail" required placeholder="votremail@gmail.com">
           </v-text-field>
@@ -53,13 +53,16 @@
 
 <script>
 
-import Vue from 'vue'
+// import Vue from 'vue'
 import axios from 'axios';
-import VueAxios from 'vue-axios';
-//import AxiosPlugin from 'vue-axios-cors';
- 
-//Vue.use(AxiosPlugin, axios)
-Vue.use(VueAxios, axios)
+//import VueAxios from 'vue-axios';
+// import AxiosPlugin from 'vue-axios-cors';
+
+//import { getApi } from '../axios-api' 
+// Vue.use(AxiosPlugin, getApi)
+// Vue.use(VueAxios, getApi)
+
+
 
 
 export default {
@@ -77,31 +80,35 @@ export default {
         },
     };
   },
+
+mounted () {
+  this.sendEmail
+  },
+
 methods:
 {
-  sendEmail(e){
-   
-  
-      var option = {
-       headers: {
+  sendEmail(){
 
-              'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8',     
-        }
-      }
-   
-
-      this.axios.post('email/sendEmail.php', this.contactinfo, option)
     
-      .then(function (response){
-        console.log(response);
-      })
-     .catch(function(error){
-       console.log(error);
-     })
-     e.preventDefault();
+   axios({
+      method : 'GET', 
+      url: '/backend/server/',
+      data : {
+      email: this.contactinfo.email,
+      subject: this.contactinfo.subject,
+      message: this.contactinfo.message
+      },
+      auth: {
+        username: 'admin',
+        password: 'opendjango'
+      }
+   }).then (function (response) {
+     console.log(response);
+    
+    }).catch(function (error){
+    console.log(error);
+    })
+   }
  }
-
-}
-
 };
 </script>
