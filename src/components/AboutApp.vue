@@ -62,7 +62,7 @@
                   class="lazyloaded"
                   sizes="100vw"
                   srcset="
-                    @/assets/images/img-slide3.jpg
+                    @/assets/images/img_Aboutus/1.jpg
                   " /></span
             ></span>
           </div>
@@ -74,7 +74,7 @@
            <div class="grid grid--vertically-centered about-online-store">
              <div class="grid__item grid__item--tablet-up-half about-online-store__image-container">
       <picture class="picture about-online-store__image">
-        <img class=" lazyloaded" srcset="@/assets/images/HE.png">
+        <img class=" lazyloaded" srcset="@/assets/images/img_Aboutus/1.jpg">
         </picture>
   
          
@@ -165,5 +165,5 @@ export default {
 };
 </script>
 
-<style src="./about.css">
+<style src="@/assets/css/about.css">
 </style>

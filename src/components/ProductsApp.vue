@@ -15,31 +15,31 @@
             <div class="row pt-md-5 aos-init aos-animate" data-aos="fade-up">
 
                 <div class="col-12 col-sm-6 col-md-4 px-4 mb-5">
-                    <img class="mb-3 mb-sm-5 img-fluid" src="@/assets/logo/idea.png">                  
+                    <img class="mb-3 mb-sm-5 img-fluid" src="@/assets/logo/fournisseurs/idea.png">                  
                 </div>
                  <div class="col-12 col-sm-6 col-md-4 px-4 mb-5">
-                    <img class="mb-3 mb-sm-5 img-fluid" src="@/assets/logo/Edibon.jpg">                  
+                    <img class="mb-3 mb-sm-5 img-fluid" src="@/assets/logo/fournisseurs/Edibon.jpg">                  
                 </div>
                  <div class="col-12 col-sm-6 col-md-4 px-4 mb-5">
-                    <img class="mb-3 mb-sm-5 img-fluid" src="@/assets/logo/Lega.png">                  
+                    <img class="mb-3 mb-sm-5 img-fluid" src="@/assets/logo/fournisseurs/Lega.png">                  
                 </div>
                  <div class="col-12 col-sm-6 col-md-4 px-4 mb-5">
-                    <img class="mb-3 mb-sm-5 img-fluid" src="@/assets/logo/semic.png">                  
+                    <img class="mb-3 mb-sm-5 img-fluid" src="@/assets/logo/fournisseurs/semic.png">                  
                 </div>
                  <div class="col-12 col-sm-6 col-md-4 px-4 mb-5">
-                    <img class="mb-3 mb-sm-5 img-fluid" src="@/assets/logo/alfa.png">                  
+                    <img class="mb-3 mb-sm-5 img-fluid" src="@/assets/logo/fournisseurs/alfa.png">                  
                 </div>
                  <div class="col-12 col-sm-6 col-md-4 px-4 mb-5">
-                    <img class="mb-3 mb-sm-5 img-fluid" src="@/assets/logo/sumakpump.png">                  
+                    <img class="mb-3 mb-sm-5 img-fluid" src="@/assets/logo/fournisseurs/sumakpump.png">                  
                 </div>
                  <div class="col-12 col-sm-6 col-md-4 px-4 mb-5">
-                    <img class="mb-3 mb-sm-5 img-fluid" src="@/assets/logo/standart.png">                  
+                    <img class="mb-3 mb-sm-5 img-fluid" src="@/assets/logo/fournisseurs/standart.png">                  
                 </div>
                  <div class="col-12 col-sm-6 col-md-4 px-4 mb-5">
-                    <img class="mb-3 mb-sm-5 img-fluid" src="@/assets/logo/lotus.png">                  
+                    <img class="mb-3 mb-sm-5 img-fluid" src="@/assets/logo/fournisseurs/lotus.png">                  
                 </div>
                 <div class="col-12 col-sm-6 col-md-4 px-4 mb-5">
-                    <img class="mb-3 mb-sm-5 img-fluid" src="@/assets/logo/alpha.png">                  
+                    <img class="mb-3 mb-sm-5 img-fluid" src="@/assets/logo/fournisseurs/alpha.png">                  
                 </div>
 
             </div>
@@ -307,36 +307,36 @@ export default {
           title: "Nettoyeur haute pression PW-C45",
           description:
             "Pression 110-190 bar Débit 500-900 l/h Puissance 2,9-4,9 kW",
-          images: require("@/assets/images/clean1.jpg"),
+          images: require("@/assets/images/img_produits/img_MT/1.jpg"),
         },
         {
           title: "Aspirateur GP 2/62",
           description:
             "Puissance : 2600 w Dépression : 2380 Débit d’air : 400 m3/h Capacité du réservoir : 62 l",
-          images: require("@/assets/images/clean2.jpg"),
+          images: require("@/assets/images/img_produits/img_MT/2.jpg"),
         },
         {
           title: "Balayeuse de voirie",
           description:
             "Cette mini Balayeuse de voirie reconditionnée permet d’améliorer la propreté et à moindre coût ",
-          images: require("@/assets/images/clean3.jpg"),
+          images: require("@/assets/images/img_produits/img_MT/3.jpg"),
         },
         {
           title: "Mini Balayeuse de voirie",
           description:
             "Cette mini Balayeuse de voirie reconditionnée permet d’améliorer la propreté et à moindre coût ",
-          images: require("@/assets/images/clean4.jpg"),
+          images: require("@/assets/images/img_produits/img_MT/4.jpg"),
         },
         {
           title: "Machine Nettoyage vapeur",
           description:"Lavage automobile intérieur / extérieur - Nettoyeur vapeur pour automobile ",
-          images: require("@/assets/images/clean5.jpg"),
+          images: require("@/assets/images/img_produits/img_MT/5.jpg"),
         },
         
         {
           title: "Nettoyage des sols",
           description:"type des machines autonomes de nettoyage des sols ",
-          images: require("@/assets/images/clean6.png"),
+          images: require("@/assets/images/img_produits/img_MT/6.jpg"),
         },
         
       ],
@@ -346,44 +346,44 @@ export default {
            title: "INGÉNIERIE PERFORMANTE",
           description:
             "La qualité et la rigueur dans la conception de nos systèmes vous assurent une combinaison parfaite sollicitant les capacités maximales de chaque composante",
-          images: require('@/assets/images/img-pneumatique1.jpg'),
+          images: require('@/assets/images/img_produits/img_MEP/1.jpg'),
          
         },
         {
          title: "ASSEMBLAGE FIABLE ET PRÉCIS",
           description:
             "Bien assemblé. Parfaitement calibré. Nos systèmes pneumatiques sont fabriqués avec un souci du détail qui vous procure des gains d’efficacité.",
-          images: require("@/assets/images/img-pneumatique2.jpg"),
+          images: require("@/assets/images/img_produits/img_MEP/2.png"),
         },
         {
           title: "INSTALLATION IRRÉPROCHABLE",
           description:
             "La mise en route de vos systèmes pneumatiques est profitable. Nos experts sont sur place et collaborent avec vous jusqu’à la toute fin, et même après.",
-          images: require("@/assets/images/img-pneumatique3.jpg"),
+          images: require("@/assets/images/img_produits/img_MEP/3.jpg"),
         },
         {
           title: "SERVICE TECHNIQUE EFFICACE",
           description:
             "Rapidité. Fiabilité. Disponibilité. Notre service de haut calibre offre tout ce que vous êtes en droit de vous attendre d’un service efficace.",
-          images: require("@/assets/images/img-pneumatique4.jpg"),
+          images: require("@/assets/images/img_produits/img_MEP/4.png"),
         },
         {
           title: "PIÈCES LIVRÉES RAPIDEMENT",
           description:
             "Le plus grand inventaire de pièces pneumatiques dans l’est du Canada, prêtes à être livrées rapidement.",
-          images: require("@/assets/images/img-pneumatique5.jpg"),
+          images: require("@/assets/images/img_produits/img_MEP/5.jpg"),
         },
         {
           title: "Matériel d’énergie pneumatique",
           description:
             "Small plates, salads & sandwiches - an intimate setting with 12 indoor seats plus patio seating",
-          images: require("@/assets/images/img-slide1.jpg"),
+          images: require("@/assets/images/img_produits/img_MEP/6.jpg"),
         },
         {
          title: "Matériel d’énergie pneumatique",
           description:
             "Small plates, salads & sandwiches - an intimate setting with 12 indoor seats plus patio seating",
-          images: require("@/assets/images/img-slide2.jpg"),
+          images: require("@/assets/images/img_produits/img_MEP/7.png"),
         },
       ],
 
@@ -394,19 +394,19 @@ export default {
           title: "Soudure",
           description:
             "Société active dans le secteur de l’emballage et du conditionnement,le domaines du pesage, de l’ensachage et la couture",
-          images: require("@/assets/images/img-slide3.jpg"),
+          images: require("@/assets/images/img_produits/img_CPS/1.jpg"),
         },
         {
           title: "Pesage, couture, soudure",
           description:
             "Societe professionnelle dans la fabrication des pièces de rechange pour les marques de machines à coudre.",
-          images: require("@/assets/images/img-slide6.jpg"),
+          images: require("@/assets/images/img_produits/img_CPS/2.jpg"),
         },
         {
           title: "Machine de pesage automatique",
           description:
             "Machine de pesage automatique, à peser automatique",
-          images: require("@/assets/images/img-slide7.jpg"),
+          images: require("@/assets/images/img_produits/img_CPS/3.jpg"),
         },
       ],
 
@@ -415,19 +415,19 @@ MDS: [
           title: "Microscope scientifique",
           description:
             "Microscope pour enfants 1200 fois mis expérience scientifique matériel didactique jouets scientifiques Microscope d'enseignement de biologie pour enfants",
-          images: require("@/assets/images/img_MDS1.jpg"),
+          images: require("@/assets/images/img_produits/img_MDS/1.jpg"),
         },
         {
           title: "Gyroscope U52006 3B Scientific",
           description:
             "- Gyroscope de qualité premium qui repose sur le principe de précession - Appareil proposant différentes expériences possibles (moments d'inertie, de rotations etc.)",
-          images: require("@/assets/images/img_MDS2.jpg"),
+          images: require("@/assets/images/img_produits/img_MDS/2.jpg"),
         },
         {
           title: "Pirani-Vakuummeter U145051-230 3B",
           description:
             "Vakuumanschluss DN 16 KF Messbereich: 120 hPa bis 0,001 hPa Messunsicherheit: < 20% vom Anzeigewert Anzeige: digitale LED-Anzeige in hPa/Torr Ziffernhöhe: 10 mm Auslesung: 5 pro sec Schreiberausgang: 0 bis 10 V Schwellwertschalter: 2 x 230 V, 2 A, unabhängig einstellbar Schaltgenauigkeit/Hysterese: ± 1 Digit Zulässige Überlast: 2 bar absolut Leistungsaufnahme: max. 15 W Abmessungen: ca. 98x98x152 mm³ Masse: ca. 1,2 kg",
-          images: require("@/assets/images/img_MDS3.jpg"),
+          images: require("@/assets/images/img_produits/img_MDS/3.jpg"),
         },
       ],
 MSDEF: [
@@ -435,19 +435,19 @@ MSDEF: [
           title: "Instruments Tactiques De Sécurité",
           description:
             "Instruments Tactiques De Sécurité,Équipement Swat,Agent De Sécurité , Find Complete Details about Instruments Tactiques De Sécurité,Équipement ..",
-          images: require("@/assets/images/img_MSD1.png"),
+          images: require("@/assets/images/img_produits/img_MSDEF/1.jpg"),
         },
         {
           title: "Protège-genou unisexe",
           description:
             "Protège-genou unisexe, accessoires pour policier et infirmières, protection des genoux",
-          images: require("@/assets/images/img_MSD2.png"),
+          images: require("@/assets/images/img_produits/img_MSDEF/2.png"),
         },
         {
           title: "AliExpress Zestawy potężny Zoomable XML ",
           description:
             "AliExpress Zestawy potężny Zoomable XML Q5 Led latarka teleskopowa samoobrona Stick Tactical Baton latarka na",
-          images: require("@/assets/images/img_MSD3.png"),
+          images: require("@/assets/images/img_produits/img_MSDEF/3.jpg"),
         },
       ],
 
@@ -459,6 +459,6 @@ MSDEF: [
 };
 </script>
 
-<style src="@/assets/style.css">
+<style src="@/assets/css/style.css">
 
 </style>

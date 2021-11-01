@@ -197,17 +197,17 @@ export default {
       activeService: "service_ME",
 
       service_ME: [
-        { title: "TOUT LE POTENTIEL DES NOUVELLES TECHNOLOGIES" ,description:"La modernisation des équipements ne nécessite pas toujours de repartir entièrement à neuf. Grâce aux experts du Groupe EP, vous avez accès aux technologies les plus avancées des secteurs hydraulique, électrohydraulique, pneumatique et électrique. Vous bénéficiez de conseils d’experts et de solutions uniques pour modifier, améliorer et reconditionner vos équipements." ,image: require("@/assets/images/img_service_ME1.jpg")},
+        { title: "TOUT LE POTENTIEL DES NOUVELLES TECHNOLOGIES" ,description:"La modernisation des équipements ne nécessite pas toujours de repartir entièrement à neuf. Grâce aux experts du Groupe EP, vous avez accès aux technologies les plus avancées des secteurs hydraulique, électrohydraulique, pneumatique et électrique. Vous bénéficiez de conseils d’experts et de solutions uniques pour modifier, améliorer et reconditionner vos équipements." ,image: require("@/assets/images/img_services/1.jpg")},
             
       ],
 
       service_IMR: [
-        { title: "TOUT LE POTENTIEL DE VOTRE ÉQUIPEMENT AU PREMIER JOUR DE DEMARRAGE" ,description:"L’installation par des techniciens expérimentés fait partie intégrante de nos services. Elle couvre les étapes de la planification, de l’exécution et de la mise en route. Nous vous accompagnons du début à la fin, qu’il s’agisse de l’implantation de l’un de nos systèmes neufs, d’un projet de modernisation ou de la réinstallation lors d’une réparation." ,image: require("@/assets/images/img_service_IMR1.jpg" )},
+        { title: "TOUT LE POTENTIEL DE VOTRE ÉQUIPEMENT AU PREMIER JOUR DE DEMARRAGE" ,description:"L’installation par des techniciens expérimentés fait partie intégrante de nos services. Elle couvre les étapes de la planification, de l’exécution et de la mise en route. Nous vous accompagnons du début à la fin, qu’il s’agisse de l’implantation de l’un de nos systèmes neufs, d’un projet de modernisation ou de la réinstallation lors d’une réparation." ,image: require("@/assets/images/img_services/2.jpg" )},
        
       ],
 
       service_REP: [
-        { title: "TOUT LE POTENTIEL D’ORIGINE DE VOS ÉQUIPEMENTS" ,description:"Notre service de réparation offre une prise en charge structurée, planifiée et rassurante. Il couvre tous les aspects de la réparation et du reconditionnement des pièces pour corriger les défaillances et redonner à vos unités leur performance d’origine. Notre équipe se charge en plus des entretiens prédictifs, préventifs et correctifs au besoin." ,image: require("@/assets/images/img_service_REP1.jpg") },
+        { title: "TOUT LE POTENTIEL D’ORIGINE DE VOS ÉQUIPEMENTS" ,description:"Notre service de réparation offre une prise en charge structurée, planifiée et rassurante. Il couvre tous les aspects de la réparation et du reconditionnement des pièces pour corriger les défaillances et redonner à vos unités leur performance d’origine. Notre équipe se charge en plus des entretiens prédictifs, préventifs et correctifs au besoin." ,image: require("@/assets/images/img_services/3.jpg") },
         
       ],
     };
@@ -215,5 +215,5 @@ export default {
 };
 </script>
 
-<style src="@/assets/style.css">
+<style src="@/assets/css/style.css">
 </style>

@@ -3,11 +3,10 @@
     <v-card>
       <v-app-bar dark fixed dense>
         <v-app-bar-nav-icon></v-app-bar-nav-icon>
-
-        <v-toolbar-title
-          ><span class="H_logo">HORIZON </span>
-          <span class="E_logo"> EQUIPEMENT</span></v-toolbar-title
-        >
+        
+        <v-toolbar-title class="H_logo">
+           <v-img src="@/assets/logo/app/logo.png"></v-img>
+        </v-toolbar-title>
         <v-spacer></v-spacer>
 
         <v-btn icon>
@@ -62,9 +61,14 @@ export default {
 </script>
 
 <style scoped>
-span.H_logo {
-  color: #ffca28;
+.H_logo {
+  position: relative;
+  padding: 0;
+  top:40%;
+  /*color: #ffca28;
   font-weight: bold;
+  background-image: url("@/assets/logo/fournisseurs/alfa.png");
+  background-repeat:no-repeat;*/
 }
 span.E_logo {
   color: #bdbdbd;

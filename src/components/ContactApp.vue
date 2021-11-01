@@ -91,8 +91,8 @@ methods:
 
     
    axios({
-      method : 'GET', 
-      url: '/backend/server/',
+      method : 'POST', 
+      url: `/backend/server/`,
       data : {
       email: this.contactinfo.email,
       subject: this.contactinfo.subject,
