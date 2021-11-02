@@ -949,6 +949,11 @@
     "cssnano-preset-default" "^4.0.0"
     "postcss" "^7.0.0"
 
+"@jeremyhamm/vue-slider@^0.2.0":
+  "integrity" "sha512-a+Zuk1REQcIJJggjggDyT+XlCKH6IT/TVVxYiRh5KQ2iI1/F0m2AUyjbDH35RD1o6DFAmWJzGcMLudqxQSa2hw=="
+  "resolved" "https://registry.npmjs.org/@jeremyhamm/vue-slider/-/vue-slider-0.2.0.tgz"
+  "version" "0.2.0"
+
 "@mrmlnc/readdir-enhanced@^2.2.1":
   "integrity" "sha512-bPHp6Ji8b41szTOcaP63VlnbbO5Ny6dwAATtY6JTjh5N2OLrb5Qk/Th5cRkRQhkWCt+EJsYrNB0MiL+Gpn6e3g=="
   "resolved" "https://registry.npmjs.org/@mrmlnc/readdir-enhanced/-/readdir-enhanced-2.2.1.tgz"
