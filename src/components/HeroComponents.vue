@@ -126,60 +126,7 @@
     </div>
      <p/> <p/> <p/>
                 </v-row>
-                <v-row class="row text-center pt-md-5 aos-init aos-animate ">
-      <v-col lg="12" class="col-12 align-self-center py-md-5 ">
-        <v-subheader class="text-h4 justify-center">NOS FOURNISSEURS</v-subheader>
-        <p>
-              LES PLUS GRANDES MARQUES DE L’INDUSTRIE SOUS UN MÊME TOIT
-        </p>
-      </v-col>
-    </v-row>
-                <!--- --- --- --- Animation --- --- --- --->                
-               <v-row>
-                    <div id="app" v-if ="logo === 'logo_Fournisseurs'">                     
-                        
-                        <sequential-entrance >
-                       
-                          <v-img class="box"
-                                src="@/assets/logo/fournisseurs/alfa.png"
-                            >
-                          </v-img>    
-                             <v-img class="box"
-                                src="@/assets/logo/fournisseurs/alpha.png"
-                            >
-                          </v-img>                     
-                              <v-img class="box"
-                                src="@/assets/logo/fournisseurs/Edibon.jpg"
-                            >
-                          </v-img> 
-                            <v-img class="box"
-                                src="@/assets/logo/fournisseurs/idea.png"
-                            >
-                          </v-img> 
-                          <v-img class="box"
-                                src="@/assets/logo/fournisseurs/semic.png"
-                          >
-                          </v-img>
-                          <v-img class="box"
-                                src="@/assets/logo/fournisseurs/standart.png"
-                          >
-                          </v-img>
-                          <v-img class="box"
-                                src="@/assets/logo/fournisseurs/sumakpump.png"
-                          >
-                          </v-img>
-                           <v-img class="box"
-                            src="@/assets/logo/fournisseurs/cleananvac.png"
-                          >
-                          </v-img>
-                          <v-img class="box"
-                            src="@/assets/logo/fournisseurs/Lega.png"
-                          >
-                          </v-img>
-                        </sequential-entrance>
-                    </div>
-              </v-row>
-             <!--- --- --- --- ------- --- --- --- ---> 
+               
      <v-row>
        <div class="container py-5">
             <div class="row pt-md-5 aos-init aos-animate" data-aos="fade-up">
@@ -319,13 +266,7 @@ export default{
          
         ],
 
-        logo : "logo_Fournisseurs",
-        logo_Fournisseurs : [
-            { 
-                images: require("@/assets/logo/fournisseurs/alfa.png") ,
-                
-            }
-        ],
+
       }
     },
 computed:{

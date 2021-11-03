@@ -4,49 +4,9 @@
      <div ></div>
     <v-row class="row text-center pt-md-5 aos-init aos-animate ">
       <v-col lg="12" class="col-12 align-self-center py-md-5 ">
-        <v-subheader class="text-h4 justify-center">PRODUITS DISTRIBUÉS</v-subheader>
-        <p>
-              LES PLUS GRANDES MARQUES DE L’INDUSTRIE SOUS UN MÊME TOIT
-        </p>
+        <v-subheader class="text-h4 justify-center"> LES PLUS GRANDES MARQUES DE L’INDUSTRIE SOUS UN MÊME TOIT</v-subheader>
       </v-col>
-    </v-row>
-     <v-row>
-       <div class="container py-5">
-            <div class="row pt-md-5 aos-init aos-animate" data-aos="fade-up">
-
-                <div class="col-12 col-sm-6 col-md-4 px-4 mb-5">
-                    <img class="mb-3 mb-sm-5 img-fluid" src="@/assets/logo/fournisseurs/idea.png">                  
-                </div>
-                 <div class="col-12 col-sm-6 col-md-4 px-4 mb-5">
-                    <img class="mb-3 mb-sm-5 img-fluid" src="@/assets/logo/fournisseurs/Edibon.jpg">                  
-                </div>
-                 <div class="col-12 col-sm-6 col-md-4 px-4 mb-5">
-                    <img class="mb-3 mb-sm-5 img-fluid" src="@/assets/logo/fournisseurs/Lega.png">                  
-                </div>
-                 <div class="col-12 col-sm-6 col-md-4 px-4 mb-5">
-                    <img class="mb-3 mb-sm-5 img-fluid" src="@/assets/logo/fournisseurs/semic.png">                  
-                </div>
-                 <div class="col-12 col-sm-6 col-md-4 px-4 mb-5">
-                    <img class="mb-3 mb-sm-5 img-fluid" src="@/assets/logo/fournisseurs/alfa.png">                  
-                </div>
-                 <div class="col-12 col-sm-6 col-md-4 px-4 mb-5">
-                    <img class="mb-3 mb-sm-5 img-fluid" src="@/assets/logo/fournisseurs/sumakpump.png">                  
-                </div>
-                 <div class="col-12 col-sm-6 col-md-4 px-4 mb-5">
-                    <img class="mb-3 mb-sm-5 img-fluid" src="@/assets/logo/fournisseurs/standart.png">                  
-                </div>
-                 <div class="col-12 col-sm-6 col-md-4 px-4 mb-5">
-                    <img class="mb-3 mb-sm-5 img-fluid" src="@/assets/logo/fournisseurs/lotus.png">                  
-                </div>
-                <div class="col-12 col-sm-6 col-md-4 px-4 mb-5">
-                    <img class="mb-3 mb-sm-5 img-fluid" src="@/assets/logo/fournisseurs/alpha.png">                  
-                </div>
-
-            </div>
-        </div>
-     </v-row>
-  
-     
+    </v-row>     
       <v-row class="row text-center pt-md-5 aos-init aos-animate" >
          
         <div class="justify-center">

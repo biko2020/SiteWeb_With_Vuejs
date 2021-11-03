@@ -1,5 +1,64 @@
 <template>
-  <v-footer padless fluid>
+<v-app>
+  <v-row class="row text-center pt-md-5 aos-init aos-animate ">
+      <v-col lg="12" class="col-12 align-self-center py-md-5 ">
+        <v-subheader class="text-h4 justify-center">NOS FOURNISSEURS</v-subheader>
+        <p>
+          NOS PRODUITS SONT DISTRIBUÉS PAR LES PLUS GRANDES MARQUES DE L’INDUSTRIE
+        </p>
+      </v-col>
+    </v-row >
+                <!--- --- --- --- Animation --- --- --- --->  
+                
+             <div class="container py-5" >
+                              
+                    <div id="app" v-if ="logo === 'logo_Fournisseurs'">                     
+                        
+                        <sequential-entrance >
+                       
+                          <v-img class="box"
+                                src="@/assets/logo/fournisseurs/alfa.png"
+                            >
+                          </v-img>    
+                             <v-img class="box"
+                                src="@/assets/logo/fournisseurs/alpha.png"
+                            >
+                          </v-img>                     
+                              <v-img class="box"
+                                src="@/assets/logo/fournisseurs/Edibon.jpg"
+                            >
+                          </v-img> 
+                            <v-img class="box"
+                                src="@/assets/logo/fournisseurs/idea.png"
+                            >
+                          </v-img> 
+                          <v-img class="box"
+                                src="@/assets/logo/fournisseurs/semic.png"
+                          >
+                          </v-img>
+                          <v-img class="box"
+                                src="@/assets/logo/fournisseurs/standart.png"
+                          >
+                          </v-img>
+                          <v-img class="box"
+                                src="@/assets/logo/fournisseurs/sumakpump.png"
+                          >
+                          </v-img>
+                           <v-img class="box"
+                            src="@/assets/logo/fournisseurs/cleananvac.png"
+                          >
+                          </v-img>
+                          <v-img class="box"
+                            src="@/assets/logo/fournisseurs/Lega.png"
+                          >
+                          </v-img>
+                        </sequential-entrance>
+                    </div>
+              
+              </div>  
+             <!--- --- --- --- ------- --- --- --- ---> 
+    
+  <v-footer padless fluid >
     <v-col lg="12">
       <v-row justify="center">
         <v-col lg="4" class="text-center">
@@ -35,13 +94,14 @@ d’intérêt au Maroc et à l’étranger afin de mieux répondre aux exigences
           Copyright Horizon Equipements. All Rights Reserved
           {{ new Date().getFullYear() }} — <strong> </strong>
           <v-spacer />
-          <strong>Designed by Ait Oufkir</strong>
+          <strong>Designed and Developed by Ait Oufkir</strong>
         </v-subheader>
       </div>
     </v-col>
   </v-footer>
+  
+  </v-app>
 </template>
-
 
 <script>
 export default {
@@ -50,8 +110,20 @@ export default {
   data() {
     return {
       icons: ["mdi-facebook", "mdi-twitter", "mdi-linkedin", "mdi-instagram"],
+
+        logo : "logo_Fournisseurs",
+        logo_Fournisseurs : [
+            { 
+                images: require("@/assets/logo/fournisseurs/alfa.png") ,
+                
+            }
+        ],
+
     };
   },
+
+        
+
 };
 </script>
 

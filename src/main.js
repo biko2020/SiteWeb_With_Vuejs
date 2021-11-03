@@ -12,8 +12,8 @@ import Carousel3d from 'vue-carousel-3d';
 Vue.use(Carousel3d);
 
 
-import SequentialEntrance from 'vue-sequential-entrance'
-import 'vue-sequential-entrance/vue-sequential-entrance.css'
+import SequentialEntrance from 'vue-sequential-entrance';
+import 'vue-sequential-entrance/vue-sequential-entrance.css';
 Vue.use(SequentialEntrance);
 
 Vue.config.productionTip = false

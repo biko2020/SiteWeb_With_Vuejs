@@ -54,11 +54,14 @@
       v-model="drawer"
       absolute
       temporary
-      
+      color="transparent"
     >
       <v-list
         nav
         dense
+        class="item-Menu"
+        
+        
         >
         <v-list-item-group
         >
@@ -114,16 +117,18 @@ export default {
   top:40%;
 
 }
-.item {
- margin:5px;
+.item-Menu {
+ margin:10px;
  border-radius: 4px;
+ 
+ 
 }
-.item :hover {
-  background: green;
+.item-Menu :hover {
+  background:rgb(184, 182, 182)
 }
-.item  :active {
-background: yellow;
-}
+.item-Menu  :active {
+background: rgb(129, 129, 128);
+} 
 
 </style>
 
