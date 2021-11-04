@@ -191,7 +191,7 @@
 
 <script>
 export default {
-  name: "Services",
+  name: "ServicesApp",
   data() {
     return {
       activeService: "service_ME",

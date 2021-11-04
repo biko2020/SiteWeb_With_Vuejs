@@ -66,7 +66,7 @@ import axios from 'axios';
 
 
 export default {
-  name: "Contactus",
+  name: "ContactApp",
   
   data() {
   //  SendEmail

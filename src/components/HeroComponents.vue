@@ -150,7 +150,7 @@ import { Carousel3d, Slide } from 'vue-carousel-3d';
 import { VueAgile } from 'vue-agile'
 
 export default{
-     name: "HeroComponent",
+     name: "HeroComponents",
      Carousel3d,
       Slide ,
       agile : VueAgile,

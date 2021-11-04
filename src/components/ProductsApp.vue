@@ -1,12 +1,17 @@
 <template>
+
  <v-content>
+  
    <v-container fill-height fluid class="my-15">
      <div ></div>
     <v-row class="row text-center pt-md-5 aos-init aos-animate ">
       <v-col lg="12" class="col-12 align-self-center py-md-5 ">
         <v-subheader class="text-h4 justify-center"> LES PLUS GRANDES MARQUES DE L’INDUSTRIE SOUS UN MÊME TOIT</v-subheader>
       </v-col>
-    </v-row>     
+    </v-row>   
+
+    <!--  ************* Debut Bloc Menu  de Domaines*******************   -->
+
       <v-row class="row text-center pt-md-5 aos-init aos-animate" >
          
         <div class="justify-center">
@@ -49,8 +54,14 @@
         </div>
       
        </v-row>
+
+       <!--  ************* Fin Bloc Menu *******************   -->
+
+
        <v-row justify="center">
-      <!-- slot d MT-->
+
+      <!--  ******** Slot domaine MT *********  -->
+
       <slot v-if="activeDomaine === 'domaine_MT'">
         <v-col
           lg="4"
@@ -89,7 +100,8 @@
         </v-col>
       </slot>
 
-      <!-- slote MEP-->
+  
+         <!--  ******** Slot domaine MEP *********  -->
 
       <slot v-if="activeDomaine === 'domaine_MEP'">
         <v-col
@@ -130,7 +142,9 @@
       </slot>
 
 
-      <!-- slot d image CPS-->
+   
+         <!--  ******** Slot domaine  CPS *********  -->
+
       <slot v-if="activeDomaine === 'domaine_CPS'">
         <v-col
           lg="4"
@@ -169,7 +183,10 @@
         </v-col>
       </slot>
 
- <!-- slot d image -->
+
+   
+     <!--  ******** Slot domaine  MDS *********  -->
+
  <slot v-if="activeDomaine === 'domaine_MDS'">
         <v-col
           lg="4"
@@ -192,7 +209,7 @@
 
             <v-divider class="mx-4"></v-divider>
             <v-card-actions>
-              <v-btn color="success" rounded>details</v-btn>
+              <v-btn color="success" rounded @click="$refs.pageDetailProduit.showDetails(mds.title, mds.description)" >plus details</v-btn>
               <v-spacer />
               <v-rating
                 :value="4.5"
@@ -208,7 +225,10 @@
         </v-col>
       </slot>
 
-      <!-- slot d MT-->
+  
+
+           <!--  ******** Slot domaine  MSDEF *********  -->
+
       <slot v-if="activeDomaine === 'domaine_MSDEF'">
         <v-col
           lg="4"
@@ -226,12 +246,13 @@
             <v-card-title>{{ msdef.title }}</v-card-title>
 
             <v-card-text>
-              <div>{{ msdef.description }}</div>
+              <p >{{ msdef.description }}</p>
             </v-card-text>
 
             <v-divider class="mx-4"></v-divider>
             <v-card-actions>
-              <v-btn color="success" rounded>details</v-btn>
+              <v-btn color="success" rounded @click="$refs.pageDetailProduit.showDetails(msdef.title, msdef.description) ">plus</v-btn>
+                           
               <v-spacer />
               <v-rating
                 :value="4.5"
@@ -246,23 +267,44 @@
           </v-card>
         </v-col>
       </slot>
-
     </v-row>
-  </v-container>
+
+<!--referencé notre fenetre Modal( "page detail produits" ) -->
+    <modal ref="pageDetailProduit" >
+   </modal>
+<!-- *---------------------------------------------------* -->
+   </v-container>
  </v-content>
 </template>
 
 <script>
+import Modal from '@/components/Modal.vue';
+
 export default {
-  name: "Products",
 
+  name: "ProductsApp",
+
+  components: {
+
+    Modal
+
+  },
+
+  methods : {
+ 
+  },
+ 
   data() {
+       
     return {
+     
+    // afficher le contenu de chaque produits selon le domaine
+
+     //* ---MT Matériel technique ---- */
+
      activeDomaine: "domaine_MT",
-    
 
-
-      MT: [
+     MT: [
         {
           title: "Nettoyeur haute pression PW-C45",
           description:
@@ -300,7 +342,7 @@ export default {
         },
         
       ],
-
+        //**-----MEP -Matériel d’énergie pneumatique */
       MEP: [
         {
            title: "INGÉNIERIE PERFORMANTE",
@@ -347,7 +389,7 @@ export default {
         },
       ],
 
-
+       //**--------CPS Conditionnement de produits en sac--- */
 
       CPS: [
         {
@@ -370,6 +412,8 @@ export default {
         },
       ],
 
+ //**---- MDS -Matériel didactique et scientifique */
+
 MDS: [
         {
           title: "Microscope scientifique",
@@ -390,6 +434,9 @@ MDS: [
           images: require("@/assets/images/img_produits/img_MDS/3.jpg"),
         },
       ],
+
+      //**----- MSDEF Matériel de sûreté et de défense- */
+      
 MSDEF: [
         {
           title: "Instruments Tactiques De Sécurité",

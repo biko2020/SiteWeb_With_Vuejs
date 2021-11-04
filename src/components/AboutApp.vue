@@ -161,7 +161,7 @@
 </template>
 <script>
 export default {
-  name: "AboutUs",
+  name: "AboutApp",
 };
 </script>
 

@@ -4,6 +4,12 @@
 @import url(https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css);
 
 
+/*------- Model window ----------
+.overflow-hidden {
+  overflow: hidden;
+}
+-------------------------------*/
+
 /*------------Carousel 3  D--------------*/
 
 .carousel-3d-container figure {
