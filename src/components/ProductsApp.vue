@@ -68,7 +68,8 @@
           v-for="(mt, index_mt) in MT"
           :key="index_mt"
         >
-          <v-card class="mx-auto my-12" max-width="374">
+          <v-card class="mx-auto my-12" max-width="374" style="height: 500px">
+
             <v-img
               height="250"
               :src="mt.images"
@@ -79,12 +80,25 @@
             <v-card-title>{{ mt.title }}</v-card-title>
 
             <v-card-text>
-              <div>{{ mt.description }}</div>
-            </v-card-text>
+              
+                <span 
+                  class="d-inline-block text-truncate"
+                  style="max-width: 300px;"
+                >
+                   {{ mt.description }}
+                </span>
+              
+             </v-card-text>
 
-            <v-divider class="mx-4"></v-divider>
-            <v-card-actions>
-              <v-btn color="success" rounded>details</v-btn>
+            <v-divider></v-divider>
+            <v-card-actions class="my-2">
+              <v-btn 
+                color="success" 
+                rounded 
+                @click="$refs.pageDetailProduit.showDetails(mt.title, mt.description) "
+              >plus
+              </v-btn>
+                           
               <v-spacer />
               <v-rating
                 :value="4.5"
@@ -109,7 +123,8 @@
           v-for="(mep, index_mep) in MEP"
           :key="index_mep"
         >
-          <v-card class="mx-auto my-12" max-width="374">
+     <v-card class="mx-auto my-12" max-width="374" style="height: 500px">
+
             <v-img
               height="250"
               :src="mep.images"
@@ -119,13 +134,21 @@
 
             <v-card-title>{{ mep.title }}</v-card-title>
 
-            <v-card-text>
-              <div>{{ mep.description }}</div>
-            </v-card-text>
+            <v-card-text><p
+            class="d-inline-block text-truncate"
+            style="max-width: 300px"
+             >{{ mep.description }}
+             </p></v-card-text>
 
-            <v-divider class="mx-4"></v-divider>
-            <v-card-actions>
-              <v-btn color="success" rounded>details</v-btn>
+            <v-divider></v-divider>
+            <v-card-actions class="my-2">
+              <v-btn 
+                color="success" 
+                rounded 
+                @click="$refs.pageDetailProduit.showDetails(mep.title, mep.description) "
+              >plus
+              </v-btn>
+                           
               <v-spacer />
               <v-rating
                 :value="4.5"
@@ -138,6 +161,7 @@
               </v-rating>
             </v-card-actions>
           </v-card>
+
         </v-col>
       </slot>
 
@@ -151,7 +175,8 @@
           v-for="(cps, index_cps) in CPS"
           :key="index_cps"
         >
-          <v-card class="mx-auto my-12" max-width="374">
+  <v-card class="mx-auto my-12" max-width="374" style="height: 500px">
+
             <v-img
               height="250"
               :src="cps.images"
@@ -161,13 +186,21 @@
 
             <v-card-title>{{ cps.title }}</v-card-title>
 
-            <v-card-text>
-              <div>{{ cps.description }}</div>
-            </v-card-text>
+            <v-card-text><p 
+            class="d-inline-block text-turncate"
+            style="max-width: 300px"
+            >{{ cps.description }}
+            </p></v-card-text>
 
-            <v-divider class="mx-4"></v-divider>
-            <v-card-actions>
-              <v-btn color="success" rounded>details</v-btn>
+            <v-divider></v-divider>
+            <v-card-actions class="my-2">
+              <v-btn 
+                color="success" 
+                rounded 
+                @click="$refs.pageDetailProduit.showDetails(cps.title, cps.description) "
+              >plus
+              </v-btn>
+                           
               <v-spacer />
               <v-rating
                 :value="4.5"
@@ -180,6 +213,7 @@
               </v-rating>
             </v-card-actions>
           </v-card>
+
         </v-col>
       </slot>
 
@@ -193,7 +227,8 @@
           v-for="(mds, index_mds) in MDS"
           :key="index_mds"
         >
-          <v-card class="mx-auto my-12" max-width="374">
+ <v-card class="mx-auto my-12" max-width="374" style="height: 500px">
+
             <v-img
               height="250"
               :src="mds.images"
@@ -203,13 +238,21 @@
 
             <v-card-title>{{ mds.title }}</v-card-title>
 
-            <v-card-text>
-              <div>{{ mds.description }}</div>
-            </v-card-text>
+            <v-card-text><p 
+            class="d-inline-block text-truncate"
+            style="max-width: 300px"
+            >{{ mds.description }}
+            </p></v-card-text>
 
-            <v-divider class="mx-4"></v-divider>
-            <v-card-actions>
-              <v-btn color="success" rounded @click="$refs.pageDetailProduit.showDetails(mds.title, mds.description)" >plus details</v-btn>
+            <v-divider></v-divider>
+            <v-card-actions class="my-2">
+              <v-btn 
+                color="success" 
+                rounded 
+                @click="$refs.pageDetailProduit.showDetails(mds.title, mds.description) "
+              >plus
+              </v-btn>
+                           
               <v-spacer />
               <v-rating
                 :value="4.5"
@@ -222,6 +265,7 @@
               </v-rating>
             </v-card-actions>
           </v-card>
+
         </v-col>
       </slot>
 
@@ -235,7 +279,8 @@
           v-for="(msdef, index_msdef) in MSDEF"
           :key="index_msdef"
         >
-          <v-card class="mx-auto my-12" max-width="374">
+          <v-card class="mx-auto my-12" max-width="374" style="height: 500px">
+
             <v-img
               height="250"
               :src="msdef.images"
@@ -245,13 +290,20 @@
 
             <v-card-title>{{ msdef.title }}</v-card-title>
 
-            <v-card-text>
-              <p >{{ msdef.description }}</p>
-            </v-card-text>
+            <v-card-text><p 
+            class="d-inline-block text-truncate"
+            style="max-width: 300px;"
+            >{{ msdef.description }}
+            </p></v-card-text>
 
-            <v-divider class="mx-4"></v-divider>
-            <v-card-actions>
-              <v-btn color="success" rounded @click="$refs.pageDetailProduit.showDetails(msdef.title, msdef.description) ">plus</v-btn>
+            <v-divider></v-divider>
+            <v-card-actions class="my-2">
+              <v-btn 
+                color="success" 
+                rounded 
+                @click="$refs.pageDetailProduit.showDetails(msdef.title, msdef.description) "
+              >plus
+              </v-btn>
                            
               <v-spacer />
               <v-rating
@@ -306,86 +358,181 @@ export default {
 
      MT: [
         {
-          title: "Nettoyeur haute pression PW-C45",
+          title: "Tapis & Nettoyeur vapeur ameublement",
           description:
-            "Pression 110-190 bar Débit 500-900 l/h Puissance 2,9-4,9 kW",
-          images: require("@/assets/images/img_produits/img_MT/1.jpg"),
+            "VAPEUR TAPIS & Meubles rembourrés ISV 2800 S: Notre modèle de ISV 2800 S nettoyage de tapis à vapeur produit jusqu'à 150-170 degrés de la vapeur grâce à son générateur de vapeur. La vapeur d'eau aide à dissoudre les salissures dans une courte période de temps et ne laisse aucune humidité sur les surfaces. L'humidité créée par la vapeur disparait aussi rapidement. Avec […]",
+          images: require("@/assets/images/img_produits/img_MT/1.png"),
         },
         {
-          title: "Aspirateur GP 2/62",
+          title: "RL 1400 Une centrifugeuse pieds Tapis essorage",
           description:
-            "Puissance : 2600 w Dépression : 2380 Débit d’air : 400 m3/h Capacité du réservoir : 62 l",
-          images: require("@/assets/images/img_produits/img_MT/2.jpg"),
+            "Centrifugeuses de tapis et de tapis essoreuse viennent dans différentes longueurs de batterie interne entre 2,7 m (8,85 ft) et 4,2 m ( 13,8 ft) en standard et même jusqu'à 5 mètres (16,4 ft) versions peuvent être effectués sur demande du client. Avec prise de raccordement sur le couvercle des centrifugeuses tapis / tapis essorage rincer les tapis et les moquettes efficacement",
+          images: require("@/assets/images/img_produits/img_MT/2.png"),
         },
         {
-          title: "Balayeuse de voirie",
+          title: "RL 1200 Couverture & Mat tordant Centrifugeuse",
           description:
-            "Cette mini Balayeuse de voirie reconditionnée permet d’améliorer la propreté et à moindre coût ",
-          images: require("@/assets/images/img_produits/img_MT/3.jpg"),
+            "RL 1400 TAPIS centrifugeuse est notre modèle le plus abordable adapté pour le rinçage et le séchage petits tapis et moquettes. Grande petite centrifugeuse surtout demandée par les magasins d'automobiles détaillant pour sécher les tapis de voiture et de nettoyage de tapis dans les versions de plus grande taille. Disponible en différentes tailles jusqu'à 2,7 mètres de longueur.  ",
+          images: require("@/assets/images/img_produits/img_MT/3.png"),
         },
-        {
-          title: "Mini Balayeuse de voirie",
+                {
+          title: "RL 1400 T roues Tapis essorage Centrifugeuse",
           description:
-            "Cette mini Balayeuse de voirie reconditionnée permet d’améliorer la propreté et à moindre coût ",
-          images: require("@/assets/images/img_produits/img_MT/4.jpg"),
+            "Pour Easy Move intérieur des plantes de nettoyage de tapis / tapis roues séchoirs à centrifuger tapis d'essorage sont les bonnes machines surtout quand la zone de l'usine est petite. Centrifugeuses de tapis et de tapis essoreuse viennent dans différentes longueurs de batterie interne entre 2,7 m (8,85 ft) et 4,2 m ( 13,8 ft) en standard et même jusqu'à 5 mètres (16,4 ...",
+          images: require("@/assets/images/img_produits/img_MT/4.png"),
         },
+             
         {
-          title: "Machine Nettoyage vapeur",
-          description:"Lavage automobile intérieur / extérieur - Nettoyeur vapeur pour automobile ",
+          title: "Manuel Monobrosse Tapis Machine à laver",
+          description:"MANUEL MACHINE À LAVER CARPET Cleanvac manuel Machines à laver tapis sont utilisés à des fins de nettoyage et de polissage des sols (marbre,pvc,mosaïques etc) également le brossage, lavage et nettoyage de tapis. Fournit un modèle de fonctionnement facile et silencieux avec entraînement par courroie et boîte de vitesses Ce sont récurage professionnels. […]",
           images: require("@/assets/images/img_produits/img_MT/5.jpg"),
         },
-        
         {
-          title: "Nettoyage des sols",
-          description:"type des machines autonomes de nettoyage des sols ",
+          title : "Floor Cleaning Machines",
+          description:"Europower offers the broadest portfolio of high-quality, Deep-Cycle Flooded, Gel and AGM batteries for floor machine applications. Durability, reliability and performance mean less unplanned downtime and increased return on your battery investment!",
           images: require("@/assets/images/img_produits/img_MT/6.jpg"),
+        },
+           {
+          title : "Balayeuse de voirie Diesel",
+          description:"- Piste de nettoyage min : 1500 mm  - Piste de nettoyage max : 1850 mm - Capacité du conteneur : 0.8 m3  Rendement horaire : 22000 m2/h Alimentation Diesel",
+          images: require("@/assets/images/img_produits/img_MT/7.jpg"),
+        },
+           {
+          title : "Balayeuse électrique 5 brosses",
+          description:"Cette balayeuse est l'équipement idéal pour le nettoyage des avenues, rues, places piétonnes et parcs de stationnement.Elle est dotée de 4 brosses latérales et d'une brosse principale s'adaptant à tous types de revêtements (enrobés, pavés, dalles, béton désactivé, résine, etc.). Avec une batterie d'une autonomie de 13 h",
+          images: require("@/assets/images/img_produits/img_MT/8.jpg"),
+        },
+           {
+          title : "Machine de nettoyage vapeur",
+          description:"Machine de nettoyage électrique dédiée au lavage et entretien intérieur et extérieur automobile. L'association vapeur et produits de nettoyage usuels (dégraissant,cire ou shampooing) permet le nettoyage complet du véhicule. Le nettoyeur vapeur SP35 A, modèle le plus puissant de la gamme 220V, est équipé d'un aspirateur 1200 Watts et d'une larg",
+          images: require("@/assets/images/img_produits/img_MT/9.jpg"),
+        },
+        {
+          title: "Tapis déshumidificateur",
+          description:"Cleanvac DRY60 déshumidificateurs tapis fait tapis & tapis séchage plus rapide. Après le lavage et l'essorage tapis en tapis centrifugeuses essoreuse, tapis et carpettes sortent sur 5% humide, et exige la pendaison et les garder environ 24-48 heures en fonction des conditions météorologiques pour les obtenir 100% sec. Cependant, à l'aide de tapis déshumidificateurs raccourcissent cette […]",
+          images: require("@/assets/images/img_produits/img_MT/10.jpg"),
+        },
+           {
+          title : "Modèle Combi Tapis Machine à laver et séchage",
+          description:"Cleanvac Modèle combiné lavage automatique Tapis & Séchage en machine est très compacte conçue pour les petites et étroites installations de lavage de tapis. rondelles de tapis qui est dans la lessive et des affaires de nettoyage à sec n'ont pas grand espace pour l'installation des machines séparement. Notre machine à laver et le séchage automatique tapis fournit les sauver de […]",
+          images: require("@/assets/images/img_produits/img_MT/11.jpg"),
+        },
+           {
+          title : "Tapis & Tapis Machine de nettoyage Starter Pack",
+          description:"Nous avons tapis complets et des solutions de nettoyage de tapis pour toutes les tailles de nettoyage. De base à la plus grande capacité et des offres entièrement automatiques, Nous fabriquons des machines pour toutes les entreprises de nettoyage de taille à votre budget.",
+          images: require("@/assets/images/img_produits/img_MT/12.jpg"),
+        },
+           {
+          title : "",
+          description:"",
+          images: require("@/assets/images/img_produits/img_MT/13.jpg"),
         },
         
       ],
         //**-----MEP -Matériel d’énergie pneumatique */
       MEP: [
         {
-           title: "INGÉNIERIE PERFORMANTE",
+           title: "MOTOBOMBAS DIESEL",
           description:
-            "La qualité et la rigueur dans la conception de nos systèmes vous assurent une combinaison parfaite sollicitant les capacités maximales de chaque composante",
+            "Acelerador manual.Electroválvula de corte.Con cargador de baterías.Sensor presión de aceite (señal).Cuadro de arranque y paro con llave contacto.Incluye piloto señalizador de presión y temperatura de aceite.",
           images: require('@/assets/images/img_produits/img_MEP/1.jpg'),
          
         },
         {
-         title: "ASSEMBLAGE FIABLE ET PRÉCIS",
+         title: "Groupe electrogene insonoriser | Alfa Generators",
           description:
-            "Bien assemblé. Parfaitement calibré. Nos systèmes pneumatiques sont fabriqués avec un souci du détail qui vous procure des gains d’efficacité.",
-          images: require("@/assets/images/img_produits/img_MEP/2.png"),
+            "Tout d’abord, nous pouvons voir que c’est un générateur / générateur de la société Alfa Generators.Par conséquent, ceci est une image représentative de nos produits. Cette photo de générateur est représentative de 800 kva de puissance à 1250 kva. Les moteurs pourraient être Volvo ou Perkins. Ce générateur, également appelé une centrale électrique, pourrait être classé comme silencieux, insonorisé ou de musculation",
+          images: require("@/assets/images/img_produits/img_MEP/2.jpg"),
         },
         {
-          title: "INSTALLATION IRRÉPROCHABLE",
+          title: "MOTEURS ÉLECTRIQUES DE TYPE EXPLOITATION",
           description:
-            "La mise en route de vos systèmes pneumatiques est profitable. Nos experts sont sur place et collaborent avec vous jusqu’à la toute fin, et même après.",
+            "Les moteurs Exproof de la famille des D6 qui dote d’entre d’une structure 71-132, elles accompagnent des plusieurs innovations hors concours! Elles ont les certificats selon les standards EN 60079 et EN61241 qui a réactualisé a la place des standards comme EN50014, EN50018, EN 50019, EN50021, EN50081 et EN50281 qui est en vigueur.",
           images: require("@/assets/images/img_produits/img_MEP/3.jpg"),
         },
         {
-          title: "SERVICE TECHNIQUE EFFICACE",
+          title: "MOTEURS INDUSTRIELS ELECTRIQUES",
           description:
-            "Rapidité. Fiabilité. Disponibilité. Notre service de haut calibre offre tout ce que vous êtes en droit de vous attendre d’un service efficace.",
-          images: require("@/assets/images/img_produits/img_MEP/4.png"),
+            "Le Group Marelli Motori est le leader dans la production des moteurs électriques moyenne courante et sous-tension, par sa compétence  depuis du siécle, Le group Marelli Motori compte parmi les groupes grands du monde avec ses employés 14.000 dans l’espace sur la production d’énergie, de la distribution et du déplacement.",
+          images: require("@/assets/images/img_produits/img_MEP/4.jpg"),
         },
         {
-          title: "PIÈCES LIVRÉES RAPIDEMENT",
+          title: "MOTEURS INDUSTRIELS ELECTRIQUES",
           description:
-            "Le plus grand inventaire de pièces pneumatiques dans l’est du Canada, prêtes à être livrées rapidement.",
+            "Les moteurs Exproof de la famille des D6 qui dote d’entre d’une structure 71-132, elles accompagnent des plusieurs innovations hors concours! Elles ont les certificats selon les standards EN 60079 et EN61241 qui a réactualisé a la place des standards comme EN50014, EN50018, EN 50019, EN50021, EN50081 et EN50281 qui est en vigueur.",
           images: require("@/assets/images/img_produits/img_MEP/5.jpg"),
         },
         {
-          title: "Matériel d’énergie pneumatique",
+          title: "Moteur électrique triphasé IE1 B3 1,5KW 230/400V, 3000 Tr/min",
           description:
-            "Small plates, salads & sandwiches - an intimate setting with 12 indoor seats plus patio seating",
+            "Moteur électrique triphasé 1,5kW / 2CV alimenté exclusivement en 230/400V avec une vitesse de rotation de 3000 tr/min.Ce moteur électrique a une hauteur d’axe de 80 mm et un diamètre d'arbre de 19 mm Il se fixe par deux pieds : montage B3 (pattes de fixation amovibles et démontables). La classe d’isolation F des moteurs triphasés CEMER leur permettent de supporter une température maximale du bobinage de 155°C et une température ambiante de 40°C",
           images: require("@/assets/images/img_produits/img_MEP/6.jpg"),
         },
         {
-         title: "Matériel d’énergie pneumatique",
+         title: "GENERADOR LOMBARDINI INDUSTRIAL DE 8 KVA / 8 KW | LDW1404L",
           description:
-            "Small plates, salads & sandwiches - an intimate setting with 12 indoor seats plus patio seating",
-          images: require("@/assets/images/img_produits/img_MEP/7.png"),
+            "El Grupo electrógeno LOMBARDINI de 8 kVA / 8 kW, de la gama industrial se caracteriza por su versatilidad, alto rendimiento y fácil mantenimiento. Su uso habitual es suministrar electricidad como fuente principal a lugares aislados sin red eléctrica o con cortes frecuentes. Se usan principalmente en: -Industria -Construcciones -Hoteles",
+          images: require("@/assets/images/img_produits/img_MEP/7.jpg"),
+        },
+        {
+          title:"SSP-H Extra Heavy Duty Slurry Pumps",
+          description :
+          "La qualité et la fiabilité de ce moteur lui permettent de s’adapter à tous les environnements industriels et agricoles. Exemples d’applications : pompes, machines-outils, convoyeurs, ventilateurs, compresseurs… Moteur IP55 de classe S1 pour utilisation continue. Grâce à ces deux condensateurs ce moteur offre un couple de démarrage important.",
+          images: require("@/assets/images/img_produits/img_MEP/8.jpg"),
+        },
+        {
+          title: "TH GRV-VD / VB Boosters",
+          description:
+          "High pressure, quiet running, compact and low power consumption. GRV-VD / VB pumps are suitable for pumping non-abrasive, clean or slightly contaminated, low viscosity without solid & ﬁbrous particles liquids. Vertical structure saves space.",
+          images: require("@/assets/images/img_produits/img_MEP/9.png"),
+        },
+        {
+          title:"TH CDLF-Stainless Boosters",
+          description :"High pressure, quiet running, compact and low power consumption. All surfaces that contact with the liquid are stainless steel, ln-line (straight pipe attachable) type pumps. CDLF pumps are suitable for pumping non-abrasive, clean or slightly contaminated, low-viscosity liquids without solid & ﬁbrous particles. Bearing is provided by tungsten carbide sliding bearings. Vertical structure saves space.",
+          images: require("@/assets/images/img_produits/img_MEP/10.png")
+        },
+                {
+          title: "Drainage Submersible Pumps",
+          description: "Les pompes submersibles sont utilisées dans les trous de drainage, les excavations de construction, l'évacuation de quelques eaux sales, les fosses septiques, l'évacuation de particules fibreuses et non solides dans l'eau, les inondations d'eau, l'évacuation des eaux usées du bas niveau, le transfert de liquides hygiéniques, les industries alimentaires, système de traitement, piscines ornementales, aquariums de type industriel, fourniture d'eau propre, petits systèmes de surpression, transfert de certains liquides par mélange, évacuation d'eau de boue et plus encore.",
+          images: require("@/assets/images/img_produits/img_MEP/11.png"),
+        },
+        {
+          title: "Dirty Water Submersible Pumps",
+          description: "Les pompes submersibles sont utilisées dans les trous de drainage, les excavations de construction, l'évacuation de quelques eaux sales, les fosses septiques, l'évacuation de particules fibreuses et non solides dans l'eau, les inondations d'eau, l'évacuation des eaux usées du bas niveau, le transfert de liquides hygiéniques, les industries alimentaires, système de traitement, piscines ornementales, aquariums de type industriel, fourniture d'eau propre, petits systèmes de surpression, transfert de certains liquides par mélange, évacuation d'eau de boue et plus encore.",
+          images: require("@/assets/images/img_produits/img_MEP/12.png"),
+        },
+        {
+          title: "Blade Septic Submersible Pumps",
+          description: "Les pompes submersibles sont utilisées dans les trous de drainage, les excavations de construction, l'évacuation de quelques eaux sales, les fosses septiques, l'évacuation de particules fibreuses et non solides dans l'eau, les inondations d'eau, l'évacuation des eaux usées du bas niveau, le transfert de liquides hygiéniques, les industries alimentaires, système de traitement, piscines ornementales, aquariums de type industriel, fourniture d'eau propre, petits systèmes de surpression, transfert de certains liquides par mélange, évacuation d'eau de boue et plus encore.",
+          images: require("@/assets/images/img_produits/img_MEP/13.png"),
+        },
+        {
+          title: "",
+          description: "",
+          images: require("@/assets/images/img_produits/img_MEP/14.jpg"),
+
+        },
+        {
+          title: "SCP ISO 2858 Norm Pumps",
+          description: "Clean or normal contaminated low or medium viscosity liquids without solid & fibrous particles.",
+          images: require("@/assets/images/img_produits/img_MEP/15.png"),
+
+        },
+        {
+          title: "SSP-V Extra Heavy Duty Slurry Pumps",
+          description: "Slurry, highly contaminated, viscous, corrosive and abrasive liquids with solid or fibrous particles. SSP-V pump series are carefully designed by taking into consideration years of production experience of STANDART POMPA and field experiences of our customers using process and slurry pumps. Hydraulic efficiency and hardwearing are considerate and optimised while hard solid particles were pumping.",
+          images: require("@/assets/images/img_produits/img_MEP/16.jpg"),
+
+        },
+        {
+         title: "NMT(D) MAX F Wet Rotor Cırculatıon Pumps",
+         description: "In use for pumping clean water or clean water & anti-freeze mixture liquids in heating systems. Water should be according to current quality standarts (such as VDI 2035). Liquid should not be contained with abrasive or explosive mixtures, mineral oil, solid or ﬁbrous particles.",
+         images: require("@/assets/images/img_produits/img_MEP/17.png"),      
+        },
+        {
+          title:"C Submersible Sewage Pumps",
+          description: "Domestic and industrial waste water, raw sewage, liquids with fibrous and solid substances.",
+          images: require("@/assets/images/img_produits/img_MEP/18.jpg")
         },
       ],
 
