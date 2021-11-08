@@ -14,18 +14,22 @@
                               
                     <div id="app" v-if ="logo === 'logo_Fournisseurs'">                     
                         
-                        <sequential-entrance >
+                        <sequential-entrance>
                        
                           <v-img class="box"
                                 src="@/assets/logo/fournisseurs/alfa.png"
                             >
-                          </v-img>    
+                          </v-img>  
+                          <v-img class="box"
+                                src="@/assets/logo/fournisseurs/lotus.png"
+                            >
+                          </v-img>        
                              <v-img class="box"
                                 src="@/assets/logo/fournisseurs/alpha.png"
                             >
                           </v-img>                     
                               <v-img class="box"
-                                src="@/assets/logo/fournisseurs/Edibon.jpg"
+                                src="@/assets/logo/fournisseurs/edibon.png"
                             >
                           </v-img> 
                             <v-img class="box"
@@ -49,7 +53,7 @@
                           >
                           </v-img>
                           <v-img class="box"
-                            src="@/assets/logo/fournisseurs/Lega.png"
+                            src="@/assets/logo/fournisseurs/lega.png"
                           >
                           </v-img>
                         </sequential-entrance>
