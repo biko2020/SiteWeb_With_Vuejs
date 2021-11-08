@@ -74,7 +74,7 @@
            <div class="grid grid--vertically-centered about-online-store">
              <div class="grid__item grid__item--tablet-up-half about-online-store__image-container">
       <picture class="picture about-online-store__image">
-        <img class=" lazyloaded" srcset="@/assets/images/img_Aboutus/1.jpg">
+        <img class=" lazyloaded" srcset="@/assets/images/img_Aboutus/logo.png">
         </picture>
   
          
@@ -129,12 +129,31 @@
           </div>
            </div>  
       </section>
+
+  <!-- slide barre nos partenaires-->    
+<h4 class="txt-bleu text-uppercase"><span>Ils nous ont fait confiance :</span></h4>            
+  <v-row>
+ <div class="container py-5" >
+  <agile :options="myOptions" class="slide">
+        <div  v-for="(img, index) in img_Barre" :key="index">
+            <v-img  
+            :src="img.images"
+            >
+            </v-img>
+        </div>    
+         <template slot="prevButton">prev</template>
+        <template slot="nextButton">next</template>  
+    </agile>
+    </div>
+ </v-row>
+
+<!-- --------------------- -->      
   <section class="section about-hero">  
     
     <div class="grid grid--vertically-centered">
         <div class="grid__item grid__item--tablet-up-two-thirds grid__item--tablet-up-push-1">
           <div class="section-heading about-mission__content">
-            <h2 class="section-heading__heading gutter-bottom--half about-heading">Nos PARTENAIRES</h2>
+            <h2 class="section-heading__heading gutter-bottom--half about-heading">Ils nous ont fait confiance :</h2>
             <hr/>
             <p class="section-heading__subhead text-major color-green-80 "><br>
 
@@ -160,8 +179,94 @@
   
 </template>
 <script>
+import { VueAgile } from 'vue-agile'
 export default {
   name: "AboutApp",
+  agile : VueAgile,
+
+  data() {
+   return {
+     myOptions: {
+                      navButtons: false,
+                      fade:false,
+                      autoplaySpeed:3000,
+                      centerMode:true,
+                      initialSlide:0,
+                      slidesToShow:4,
+                      autoplay: true,
+                      infinite:true,
+                  
+                 
+                  
+                  
+                      
+
+                      responsive: [
+                          {
+                              breakpoint: 600,
+                              settings: {
+                                  dots: false
+                              }
+                          },
+                          
+                          {
+                              breakpoint: 900,
+                              settings: {
+                                  navButtons: true,
+                                   arrows: true,
+                                  dots: true,
+                                  infinite: true
+                              }
+                          }
+                      ]
+                  },
+            
+ /*  slide agil 2 d */
+        slide_Barre: "img_Barre",
+        img_Barre :[
+          {
+            images: require("@/assets/logo/references/1.png"),
+          },
+          {
+           images: require("@/assets/logo/references/2.png"),
+          },
+          {
+            images: require("@/assets/logo/references/3.jpg")
+          },
+          {
+           images: require("@/assets/logo/references/4.png"),
+          },
+          {
+            images: require("@/assets/logo/references/5.jpg")
+          },
+          {
+            images: require("@/assets/logo/references/6.png")
+          },
+          {
+            images: require("@/assets/logo/references/7.jpeg")
+          },
+          {
+            images: require("@/assets/logo/references/8.png")
+          },
+          {
+            images: require("@/assets/logo/references/9.jpg")
+          },
+          {
+            images: require("@/assets/logo/references/10.png")
+          },
+          {
+            images: require("@/assets/logo/references/11.jpg")
+          },
+          {
+            images: require("@/assets/logo/references/12.jpg")
+          },
+          
+         
+        ],
+
+
+   }
+  }
 };
 </script>
 

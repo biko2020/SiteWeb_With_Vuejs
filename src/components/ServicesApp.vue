@@ -2,8 +2,10 @@
   <v-container fill-height fluid class="my-15">
    
      <v-row class="row text-center pt-md-5 aos-init aos-animate ">
+      
       <v-col lg="12" class="col-12 align-self-center py-md-5 ">
         <v-subheader class="text-h4 justify-center">LE PLUS HAUT NIVEAU D’EXPERTISE AU MÈTRE CARRÉ</v-subheader>
+        <br>
         <p>
               Notre service de réparation et reconditionnement offre une prise en charge structurée, planifiée et rassurante.
         </p>
@@ -11,25 +13,28 @@
      </v-row>
 
 
-    <v-row class="row text-center pt-md-5 aos-init aos-animate">
+    <v-row class="row text-center pt-md-5 aos-init aos-animate justify-center" >
      
         <div class="justify-center">
           <v-chip
+             style="width:300px "
             @click="activeService = 'service_ME'"
             :color="activeService === 'service_ME' ? 'success' : ''"
-            class="mx-5"
+            class="mx-5 my-5 justify-center"
             >MODERNISATION D'ÉQUIPEMENT</v-chip
           >
           <v-chip
+             style="width:300px "
             @click="activeService = 'service_IMR'"
             :color="activeService === 'service_IMR' ? 'success' : ''"
-            class="mx-5"
+            class="mx-5 my-5 justify-center"
             >INSTALLATION ET MISE EN ROUTE</v-chip
           >
           <v-chip
+            style="width:300px "
             @click="activeService = 'service_REP'"
             :color="activeService === 'service_REP' ? 'success' : ''"
-            class="mx-5"
+            class="mx-5 my-5 justify-center"
             >SERVICES RÉPARATION</v-chip
           >
         </div>
@@ -52,6 +57,11 @@
            
           </v-card>
         </v-col>
+        <!-- retour a la ligne -->
+         <div class="my-15">
+         <hr/>
+         </div>
+         
         <div class="row-noir">
         <div class="container-fluid py-md-5 ">
             <div class="row py-5 aos-init aos-animate" data-aos="fade-up">
@@ -82,6 +92,10 @@
                 </div>
             </div>
         </div>
+        <!-- retour a la ligne -->
+         <div class="my-15">
+         <hr/>
+         </div>
     </div>
       </slot>
       <slot v-if="activeService === 'service_IMR'">
@@ -104,6 +118,10 @@
             </v-card-text>
           </v-card>
         </v-col>
+                <!-- retour a la ligne -->
+         <div class="my-15">
+         <hr/>
+         </div>
         <div class="row-gris">
         <div class="container-fluid py-md-5 ">
             <div class="row py-5 aos-init aos-animate" data-aos="fade-up">
@@ -129,6 +147,10 @@
                 </div>
             </div>
         </div>
+                <!-- retour a la ligne -->
+         <div class="my-15">
+         <hr/>
+         </div>
     </div>
       </slot>
       <hr/> 
@@ -153,6 +175,10 @@
             </v-card-text>
           </v-card>
         </v-col>
+                <!-- retour a la ligne -->
+         <div class="my-15">
+         <hr/>
+         </div>
         <div class="container-fluid py-5 ">
         <div class="row pb-md-5 aos-init aos-animate" data-aos="fade-up">
             <div class="col-md-4 p-0 ">
@@ -183,6 +209,10 @@
                 </div>
             </div>
         </div>
+                <!-- retour a la ligne -->
+         <div class="my-15">
+         <hr/>
+         </div>
     </div>
       </slot>
     </v-row>

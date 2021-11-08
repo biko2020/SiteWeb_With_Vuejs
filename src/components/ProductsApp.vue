@@ -16,43 +16,41 @@
          
         <div class="justify-center">
           <v-chip
+           style="width:300px "
             @click="activeDomaine = 'domaine_MT'"
             :color="activeDomaine === 'domaine_MT' ? 'success' : ''"
-            class="mx-5"
+            class="mx-5 my-5 justify-center"
             >Matériel technique</v-chip
           >
           <v-chip
+          style="width:300px "
             @click="activeDomaine = 'domaine_MEP'"
             :color="activeDomaine === 'domaine_MEP' ? 'success' : ''"
-            class="mx-5"
+            class="mx-5 my-5 justify-center"
             >Matériel d’énergie pneumatique</v-chip
           >
           <v-chip
+          style="width:300px "
             @click="activeDomaine = 'domaine_CPS'"
             :color="activeDomaine === 'domaine_CPS' ? 'success' : ''"
-            class="mx-5"
+            class="mx-5 my-5 justify-center"
             >Conditionnement de produits en sac</v-chip
           >
                <v-chip
+               style="width:300px "
             @click="activeDomaine = 'domaine_MDS'"
             :color="activeDomaine === 'domaine_MDS' ? 'success' : ''"
-            class="mx-5"
+            class="mx-5 my-5 justify-center"
             >Matériel didactique et scientifique</v-chip
           >
-          </div>
-          </v-row>
-          <v-row  class="justify-content-center">
-            <div>
-      
-            <v-chip
+           <v-chip
+           style="width:300px "
             @click="activeDomaine = 'domaine_MSDEF'"
             :color="activeDomaine === 'domaine_MSDEF' ? 'success' : ''"
-            class="mx-5"
+             class="mx-5 my-5 justify-center"
             >Matériel de sûreté et de défense</v-chip
           >
-
-        </div>
-      
+          </div>             
        </v-row>
 
        <!--  ************* Fin Bloc Menu *******************   -->
@@ -134,11 +132,11 @@
 
             <v-card-title>{{ mep.title }}</v-card-title>
 
-            <v-card-text><p
+            <v-card-text><span
             class="d-inline-block text-truncate"
             style="max-width: 300px"
              >{{ mep.description }}
-             </p></v-card-text>
+             </span></v-card-text>
 
             <v-divider></v-divider>
             <v-card-actions class="my-2">
@@ -186,11 +184,11 @@
 
             <v-card-title>{{ cps.title }}</v-card-title>
 
-            <v-card-text><p 
-            class="d-inline-block text-turncate"
+            <v-card-text><span
+            class="d-inline-block text-truncate"
             style="max-width: 300px"
             >{{ cps.description }}
-            </p></v-card-text>
+            </span></v-card-text>
 
             <v-divider></v-divider>
             <v-card-actions class="my-2">
@@ -540,22 +538,55 @@ export default {
 
       CPS: [
         {
-          title: "Soudure",
+          title: "JANOMATIC B2",
           description:
-            "Société active dans le secteur de l’emballage et du conditionnement,le domaines du pesage, de l’ensachage et la couture",
-          images: require("@/assets/images/img_produits/img_CPS/1.jpg"),
+            "Elle est destinée à l’ensachage de moyenne cadence d’une multitude de produits secs en sacs à gueules ouvertes. Elle fait l’objet d’un certificat d’examen de type CE délivré le 19/10/2009. La JANOMATIC B2 est livrée montée sur son bâti potence, prête à fonctionner. La simplicité d'installation et d'utilisation permet au client d'effectuer lui-même la mise en service s’il le désire.",
+          images: require("@/assets/images/img_produits/img_CPS/1.png"),
         },
         {
-          title: "Pesage, couture, soudure",
+          title: "PESEUSE BONA",
           description:
-            "Societe professionnelle dans la fabrication des pièces de rechange pour les marques de machines à coudre.",
-          images: require("@/assets/images/img_produits/img_CPS/2.jpg"),
+            "La peseuse ensacheuse BONA est destinée à l’ensachage des sacs à gueule ouverte de 20 à 100 kg, de produits granuleux coulant librement par gravité. (Céréales, riz, semoules, sucre, café, cacao, arachides, granulés d’aliments du bétail, engrais, sable sac….)",
+          images: require("@/assets/images/img_produits/img_CPS/2.png"),
         },
         {
-          title: "Machine de pesage automatique",
+          title: "JANOMATIC",
           description:
-            "Machine de pesage automatique, à peser automatique",
-          images: require("@/assets/images/img_produits/img_CPS/3.jpg"),
+          "Les doseuses JANOMATIC sont simples, précises et fiables. Elles sont destinées à l’ensachage haute cadence d’une multitude de produits secs, Elles sont aussi destinées à être installées au-dessus de n'importe quel dispositif d'ensachage ou de remplissage tels que : présentateurs de sacs G.O. ou valve, ensacheuses verticales, dispositifs pour enfûtage, big-bags, containers, etc.... Elles font l’objet d’un certificat d’examen de type CE délivré le 19/10/2009.",
+          images: require("@/assets/images/img_produits/img_CPS/3.png"),
+        },
+        {
+          title: "SEM 5 FISCHBEIN",
+          description: 
+          "Le modèle SEM 5 est une machine d’emballage qui permet de peser et d’ensacher (ou mise en bocal) de 1 à 5 kg tout produits tels que les poudres etc….Il y’a une trémie d’alimentation en inox 304 L, équipée d’un hublot de contrôle de niveau Vanne pneumatique instantané de la queue de chute, balance tout inox Température de fonctionnement -10°C à +40°C Environ 200 à 300 doses par heure. L'ensemble est en Inox 304. 230 V. Alimentation pneumatique : 3 bars environ.",          
+          images: require("@/assets/images/img_produits/img_CPS/4.jpg"),
+        },
+        {
+          title: "Modèle F50",
+          description: 
+          "Couseuse portative modèle F50 destinée à la couture avec dépose de papier crêpon de tout type de sac Cadences possibles selon opérateur : 150 sacs/h.Accessoire conseillé : un système équilibreur pour supporter le poids de la couseuse (7 kg).",
+          images: require("@/assets/images/img_produits/img_CPS/5.jpg"),
+        },
+        {
+          title: "Modèle FH ( portative horizontale )",
+          description: "Même modèle que la couseuse F en modèle horizontal. Came crochet améliorée : durée de vie allongée. • Meilleure résistance des bagues : longue durée de vie et meilleure lubrification. • Support galet renforcé et galet de came amélioré : pas de problèmes de bourrage de sac. • Renforcement de l'ensemble de la barre à aiguille et du collier de serrage. • Point de chaînette à 1 fil simple, type 101. • Longueur du point : 7mm non ajustable. • 220/240 V en standard (autres voltages sur demande",
+          images: require("@/assets/images/img_produits/img_CPS/6.jpg"),
+        },
+        {
+          title: "Soudeuse type CPN",
+          description: "Soudeuse thermique manuelle montée sur un piédestal pour la soudure par transfert de chaleur de matériaux complexes, le polypropylène, l’aluminium fin, le papier, etc.Composée de 2 mors téflonés Capacité de soudure (2 plis): de 2 x 0,01 à 2 x 0,2 mm Largeur de soudure: 15 mm Longueur soudure : 200,300, 400, 600 mm Disponible en 230/240 V, monophasé + terre",
+          images: require("@/assets/images/img_produits/img_CPS/7.jpg"),
+        },
+        {
+          title: "SUPRAVAC",
+          description: "Soudeuse à double impulsion, cette gamme permet la fermeture de sacs avec mise sous vide partielle avec ou sans injection de gaz. Un cycle assure un contrôle de l’aspiration par l’utilisateur par l’intermédiaire d’une pédale, un mode gère l’aspiration par une temporisation réglable sur l’afficheur digital pour les opérations répétitives.",
+          images: require("@/assets/images/img_produits/img_CPS/8.jpg"),
+        },
+        {
+          title: "Soudeuse portative type pince",
+          description: 
+          "Soudeuse portative type pince destinée à souder tout type de sac thermoscellable.Double impulsion Cadences possible : 3 à 4 sachets /min Un câble de 3 m est inclus (6 m en option). Potentiomètre pour régulation temps d'impulsion. Longueur de soudure : 200, 300, 400 mm. La capacité de soudure va de 2 x 0,01 à 2 x 0,1 mm. Disponible en 240 volts.",
+          images: require("@/assets/images/img_produits/img_CPS/9.jpg"),
         },
       ],
 
@@ -563,22 +594,57 @@ export default {
 
 MDS: [
         {
-          title: "Microscope scientifique",
+          title: "SCADA SOFTWARE APPLICATION",
           description:
-            "Microscope pour enfants 1200 fois mis expérience scientifique matériel didactique jouets scientifiques Microscope d'enseignement de biologie pour enfants",
+            "This software is in charge of controlling the position of the Robot in order to measure values of the field selected by the user. It is composed of following Software Package: Robot Movement: This Software Package moves the Robot to specific point established by the user and control the movement of the axis freely. Field Sweep: This Software Package programs the robot to sweep an area specified by the user. The robot will sweep as many planes as the user defines. Robot Configuration: This Software Package checks the status of the Robot and establishes the origin of the coordinate system.",
           images: require("@/assets/images/img_produits/img_MDS/1.jpg"),
         },
         {
-          title: "Gyroscope U52006 3B Scientific",
+          title: "CONTRÔLE DE PROCESSUS:RYC.B",
           description:
-            "- Gyroscope de qualité premium qui repose sur le principe de précession - Appareil proposant différentes expériences possibles (moments d'inertie, de rotations etc.)",
+            "Unité de Base d´Enseignement pour l´Étude de Régulation et Contrôle",
           images: require("@/assets/images/img_produits/img_MDS/2.jpg"),
         },
         {
-          title: "Pirani-Vakuummeter U145051-230 3B",
+          title: "CONTRÔLE DE PROCESSUS: CECI",
           description:
-            "Vakuumanschluss DN 16 KF Messbereich: 120 hPa bis 0,001 hPa Messunsicherheit: < 20% vom Anzeigewert Anzeige: digitale LED-Anzeige in hPa/Torr Ziffernhöhe: 10 mm Auslesung: 5 pro sec Schreiberausgang: 0 bis 10 V Schwellwertschalter: 2 x 230 V, 2 A, unabhängig einstellbar Schaltgenauigkeit/Hysterese: ± 1 Digit Zulässige Überlast: 2 bar absolut Leistungsaufnahme: max. 15 W Abmessungen: ca. 98x98x152 mm³ Masse: ca. 1,2 kg",
+            "Équipement de Contrôleurs Industriels, CECI, est basé sur une structure de conception modulaire dont la fonctionnalité est diviséeen différents modules pour permettre à l'étudiant de mieux comprendre l'unité. Les modules inclus sont: contrôleur...",
           images: require("@/assets/images/img_produits/img_MDS/3.jpg"),
+        },
+          {
+          title: "AEL-CPSS-01S",
+          description:
+            "Système d'alimentation Smart Grid avec Génération, Transmission, Distribution et Charges, avec SCADA ,The Smart Grid Power System Application, with Automatic Control Generation, Transmission Line and Loads, with SCADA, AEL-CPSS-01S , has been designed by Edibon for the training at both the theoretical and practical levels in the field of Power...",
+          images: require("@/assets/images/img_produits/img_MDS/4.jpg"),
+        },
+          {
+          title: "AEL-WPT",
+          description:
+            "Compte tenu de ce qui précède, ce banc d'essai permet d'étudier expérimentalement la conversion de l'énergie éolienne. dans l'électricité au moyen d'un générateur d'énergie éolienne. L'équipement est configuré pour fonctionner en mode isolé et est...",
+          images: require("@/assets/images/img_produits/img_MDS/5.jpg"),
+        },
+           {
+          title: "Unité de Pompe Hydraulique",
+          description:
+            "L’Équipement de Pompe Hydraulique, HPU, conçu par EDIBON fournit tous les composants nécessaires pour alimenter en huile de travailsous pression les équipements EDIBON comprenant des circuits hydrauliques.L'équipement HPU dispose des composants...",
+          images: require("@/assets/images/img_produits/img_MDS/6.jpg"),
+        },
+        {
+          title: "AEL-SERIN/CA-1KW",
+          description: "The 1 kW AC Industrial Servomotor Application, AEL-SERIN/CA-1KW, has been designed to study the working principle and control of industrial servomotors.",
+          images: require("@/assets/images/img_produits/img_MDS/7.jpg"),
+        },
+
+         {
+          title: "T/KIT3",
+          description: "The Maintenance Kit containing Refrigerant Filling and Evacuation module, T/KIT3, is a unit capable of transferring the refrigerant gas from the cooling system to the appropriate cylinder. This recovery unit can work with a wide range of...",
+          images: require("@/assets/images/img_produits/img_MDS/8.jpg"),
+        },
+
+         {
+          title: "TDEGC",
+          description: "The diesel power generating set with integrated control and monitoring system has been developed by Edibon to conduct studies and research on the operation process of real power plants running with diesel gensets. This equipment is composed of two...",
+          images: require("@/assets/images/img_produits/img_MDS/9.jpg"),
         },
       ],
 
@@ -586,22 +652,93 @@ MDS: [
       
 MSDEF: [
         {
-          title: "Instruments Tactiques De Sécurité",
+          title: "Mine Clearance Helmet",
           description:
-            "Instruments Tactiques De Sécurité,Équipement Swat,Agent De Sécurité , Find Complete Details about Instruments Tactiques De Sécurité,Équipement ..",
-          images: require("@/assets/images/img_produits/img_MSDEF/1.jpg"),
+            "Mine Clearance Helmet",
+          images: require("@/assets/images/img_produits/img_MSDEF/1.png"),
         },
         {
-          title: "Protège-genou unisexe",
+          title: "Equipements de Sauvetage",
           description:
-            "Protège-genou unisexe, accessoires pour policier et infirmières, protection des genoux",
+            "Equipements de Sauvetage",
           images: require("@/assets/images/img_produits/img_MSDEF/2.png"),
         },
         {
-          title: "AliExpress Zestawy potężny Zoomable XML ",
+          title: "NLJD ",
           description:
-            "AliExpress Zestawy potężny Zoomable XML Q5 Led latarka teleskopowa samoobrona Stick Tactical Baton latarka na",
-          images: require("@/assets/images/img_produits/img_MSDEF/3.jpg"),
+            "NLJD",
+          images: require("@/assets/images/img_produits/img_MSDEF/3.png"),
+        },
+          {
+          title: "Equipements militaires",
+          description:
+            "Advanced protection with highly bulletproof equipement and product for soldiers",
+          images: require("@/assets/images/img_produits/img_MSDEF/4.png"),
+        },
+          {
+          title: "TACTICAL BALLISTIC VEST",
+          description:
+            "TACTICAL BALLISTIC VEST",
+          images: require("@/assets/images/img_produits/img_MSDEF/5.png"),
+        },
+        {
+          title: "EOD Stethscope",
+          description:
+            "EOD Stethscope",
+          images: require("@/assets/images/img_produits/img_MSDEF/6.png"),
+        },
+        {
+          title: "HID SearchLight ",
+          description:
+            "HID SearchLight ",
+          images: require("@/assets/images/img_produits/img_MSDEF/7.png"),
+        },
+
+          {
+          title: "Equipement de terrain",
+          description:
+            "Equipement de terrain",
+          images: require("@/assets/images/img_produits/img_MSDEF/8.png"),
+        },
+        {
+          title: "Tente",
+          description:
+            "Tente",
+          images: require("@/assets/images/img_produits/img_MSDEF/9.png"),
+        },
+        {
+          title: "EOD Vehicle",
+          description:
+            "EOD Vehicle",
+          images: require("@/assets/images/img_produits/img_MSDEF/10.png"),
+        },
+          {
+          title: "BULLETPROOF PLATE",
+          description:
+            "BULLETPROOF PLATE",
+          images: require("@/assets/images/img_produits/img_MSDEF/11.png"),
+        },
+        {
+          title: "ARMORED SHIELD ",
+          description:
+            "ARMORED SHIELD",
+          images: require("@/assets/images/img_produits/img_MSDEF/12.png"),
+        },
+        {
+          title: "Rappelling Gears ",
+          description:
+            "Rappelling Gears ",
+          images: require("@/assets/images/img_produits/img_MSDEF/13.jpg"),
+        },
+        {
+          title: "Police Body Gears",
+          description: "Police Body Gears",
+          images: require("@/assets/images/img_produits/img_MSDEF/14.jpg"),
+        },
+          {
+          title: "Police Baton & Warning Light Stick",
+          description: "Police Baton & Warning Light Stick",
+          images: require("@/assets/images/img_produits/img_MSDEF/15.jpg"),
         },
       ],
 
