@@ -6,6 +6,7 @@
       <v-col lg="12" class="col-12 align-self-center py-md-5 ">
         <v-subheader class="text-h4 justify-center">LE PLUS HAUT NIVEAU D’EXPERTISE AU MÈTRE CARRÉ</v-subheader>
         <br>
+        <br>
         <p>
               Notre service de réparation et reconditionnement offre une prise en charge structurée, planifiée et rassurante.
         </p>

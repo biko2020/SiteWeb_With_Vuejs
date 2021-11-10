@@ -5,19 +5,17 @@
         <v-subheader class="text-h4 justify-center">Contact Us</v-subheader>
         <p>
           Besoin de parler à un expert ?
-          N’hésitez pas à communiquer avec nous.
-        </p>
-      </v-col>
+          N’hésitez pas à communiquer avec nous. </p>
+        </v-col>
 
       <v-col md="4">
-        <iframe
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13294.531127293294!2d-7.573442409359025!3d33.58888254175123!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xda7cce0e3802d55%3A0x458cd3047e24c709!2sHay%20Mohammadi%2C%20Casablanca!5e0!3m2!1sfr!2sma!4v1632409488725!5m2!1sfr!2sma"
-          width="600"
-          height="450"
-          style="border: 0"
-          allowfullscreen=""
-          loading="lazy"
-        ></iframe>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3319.7911853066475!2d-7.380916048978963!3d33.688470738542634!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xda7b6ec955c5635%3A0x63802ce49a399ba0!2sBd%20de%20Palestine%2C%20Mohamm%C3%A9dia!5e0!3m2!1sfr!2sma!4v1636534911195!5m2!1sfr!2sma" 
+        width="600" 
+        height="450" 
+        style="border:0;" 
+        allowfullscreen="" 
+        loading="lazy">
+        </iframe>
       </v-col>
 
       <v-col md="4" offset-md="4">
@@ -46,6 +44,20 @@
 
         <!--End for form e-mail-->
       </v-col>
+    </v-row>
+    <v-row  class="grid about-hero">
+      <v-col>  
+        <div class="container py-5">       
+        <span >
+        Adresse: Bd Palestine lotissement Grini Imm A appt 5-Mohammedia <br>
+          Tél: +212 6 66 45 27 47 <br>
+          Tél: +212 6 68 45 15 75 <br>
+          Fax: +212 5 21 00 24 19 <br>
+          E-mail:contact@horizonequipement.ma <br>
+        </span>
+        </div>
+        </v-col>
+      <v-col></v-col>
     </v-row>
   </v-container>
 </template>
@@ -112,3 +124,6 @@ methods:
  }
 };
 </script>
+<style src="@/assets/css/about.css">
+
+</style>
