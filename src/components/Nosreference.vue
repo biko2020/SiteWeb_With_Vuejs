@@ -1,7 +1,7 @@
 <template>
   <v-main>
     <v-content>
-      <v-container app>
+      <v-container>
         <!-- slide barre nos partenaires-->
         <h4 class="txt-bleu text-uppercase">
           <span>Ils nous ont fait confiance :</span>
