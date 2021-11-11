@@ -228,9 +228,9 @@ export default {
       slid3dImg: [
         {
           image: require("@/assets/images/carousel_accueil/1.jpg"),
-          title: "Matériel d’énergie pneumatique ",
+          title: "Groupes électrogènes-pompes",
           sousTitle:
-            "Prenez le temps de vous poser les bonnes questions ! Nos experts vous conseillent sur ce qu'il faut savoir avant d'acheter un equipement ou de choisir une machine industriel.",
+            "Prenez le temps de vous poser les bonnes questions ! Nos experts vous conseillent sur ce qu'il faut savoir avant d'acheter un equipement ou de choisir une machine industrielle.",
         },
         {
           image: require("@/assets/images/carousel_accueil/2.jpg"),
@@ -247,7 +247,7 @@ export default {
         },
         {
           image: require("@/assets/images/carousel_accueil/4.jpg"),
-          title: "Matériel didactique et scientifique",
+          title: "Matériel didactique et scientifique-instrument de mesure",
           sousTitle:
             "Horizon equipement vous offre des equipements didactiques dédiés à l’enseignemen supérieur et des outils technologiques modernes pour une formation rapide, facile et efficace.",
         },
@@ -255,7 +255,7 @@ export default {
           image: require("@/assets/images/carousel_accueil/5.jpg"),
           title: "Matériel de sûreté et de défense",
           sousTitle:
-            "Vous êtes à la recherche des dernières équipements en matière de sécurité et de défense, Horizon equipement vous offre toute une gamme de produits : Equipement Anti-Riot, Engrenages militaires, Gilet pare-balles, Solution d’armures transparente, Décontamination, Détection explosive. ",
+            "Vous êtes à la recherche de dernier équipements en matière de sécurité et de défense, Horizon equipement vous offre toute une gamme de produits : Equipement Anti-Riot, Engrenages militaires, Gilet pare-balles, Solution d’armures transparente, Décontamination, Détection explosive. ",
         },
       ],
     };

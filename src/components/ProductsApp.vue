@@ -16,39 +16,39 @@
       <v-row class="row text-center pt-md-5 aos-init aos-animate">
         <div class="justify-center">
           <v-chip
-            style="width:300px "
+            style="width:350px "
             @click="activeDomaine = 'domaine_MT'"
             :color="activeDomaine === 'domaine_MT' ? 'success' : ''"
             class="mx-5 my-5 justify-center"
             >Matériel technique</v-chip
           >
           <v-chip
-            style="width:300px "
+            style="width:350px "
             @click="activeDomaine = 'domaine_MEP'"
             :color="activeDomaine === 'domaine_MEP' ? 'success' : ''"
             class="mx-5 my-5 justify-center"
-            >Matériel d’énergie pneumatique</v-chip
+            >Groupes électrogènes-pompes</v-chip
           >
           <v-chip
-            style="width:300px "
+            style="width:350px "
             @click="activeDomaine = 'domaine_CPS'"
             :color="activeDomaine === 'domaine_CPS' ? 'success' : ''"
             class="mx-5 my-5 justify-center"
             >Conditionnement de produits en sac</v-chip
           >
           <v-chip
-            style="width:300px "
-            @click="activeDomaine = 'domaine_MDS'"
-            :color="activeDomaine === 'domaine_MDS' ? 'success' : ''"
-            class="mx-5 my-5 justify-center"
-            >Matériel didactique et scientifique</v-chip
-          >
-          <v-chip
-            style="width:300px "
+            style="width:350px "
             @click="activeDomaine = 'domaine_MSDEF'"
             :color="activeDomaine === 'domaine_MSDEF' ? 'success' : ''"
             class="mx-5 my-5 justify-center"
             >Matériel de sûreté et de défense</v-chip
+          >
+           <v-chip
+            style="width:367px "
+            @click="activeDomaine = 'domaine_MDS'"
+            :color="activeDomaine === 'domaine_MDS' ? 'success' : ''"
+            class="mx-5 my-5 justify-center"
+            >Matériel didactique et scientifique-instrument de mesure</v-chip
           >
         </div>
       </v-row>
