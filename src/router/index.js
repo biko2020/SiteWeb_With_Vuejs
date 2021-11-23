@@ -1,6 +1,8 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
+import Cpanel from '../assets/dashboard/views/Cpanel.vue'
+
 
 
 
@@ -39,7 +41,18 @@ const routes = [
     name:'Contact',
     component: () => import(/* webpackChunkName: "Contact" */ '../views/Contact.vue')
   
-   }
+   },
+
+
+   //////////////////----------- dashboard Administration -------------////////////////
+{
+  path: '/Capnel',
+  name:'Cpanel',
+  component:Cpanel,
+ 
+}
+   /////////////////////////////////  /////////////////////// //////////////// ///////
+
 ]
 
 const router = new VueRouter({
