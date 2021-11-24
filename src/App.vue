@@ -1,15 +1,20 @@
 <template>
-  
-    <v-content>
-      <router-view></router-view>
-    </v-content>
+   <v-app>
+       <router-view></router-view>
+    
+   </v-app>
+   
 
 </template>
 
 <script>
+
 export default {
-  name: "App",
-   
+  name: 'App',
+
+   components: {
+
+   },
  
 
   data() {
