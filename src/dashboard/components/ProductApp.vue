@@ -1,9 +1,10 @@
 <template>
-    <h1>Add Categories</h1>
+    <h1>Add Prodcuts</h1>
+
 </template>
 <script>
 export default {
-    nam:"CategorieApp",
+    name: 'ProductApp',
     
 }
 </script>

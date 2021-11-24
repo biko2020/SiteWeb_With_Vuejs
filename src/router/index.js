@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
-import Cpanel from '../assets/dashboard/views/Cpanel.vue'
+import Cpanel from '../dashboard/views/Cpanel.vue'
 
 
 
@@ -16,18 +16,17 @@ const routes = [
    
   },
   
- {
-  path:'/products',
-  name:'Products',
-  component: () => import(/* webpackChunkName: "Products" */ '../views/Products.vue')
+  {
+   path:'/products',
+   name:'Products',
+   component: () => import(/* webpackChunkName: "Products" */ '../views/Products.vue')
+  },
+  {
+   path:'/services',
+   name:'Services',
+   component: () => import(/* webpackChunkName: "Services" */ '../views/Services.vue')
 
- },
- {
-  path:'/services',
-  name:'Services',
-  component: () => import(/* webpackChunkName: "Services" */ '../views/Services.vue')
-
- },
+  },
   {
     path: '/about',
     name: 'About',
@@ -46,11 +45,21 @@ const routes = [
 
    //////////////////----------- dashboard Administration -------------////////////////
 {
-  path: '/Capnel',
+  path: '/cpanel',
   name:'Cpanel',
   component:Cpanel,
- 
-}
+},
+{
+  
+  path: '/addCategories',
+  name: 'AddCategories',
+  component: () => import(/* webpackChunkName: "Categories" */ '@/dashboard/views/AddCategories.vue')
+},
+{
+  path: '/addProducts',
+  name: 'AddProducts',
+  component: () => import(/* webpackChunkName: "Products" */ '@/dashboard/views/AddProdcuts.vue')
+},
    /////////////////////////////////  /////////////////////// //////////////// ///////
 
 ]
