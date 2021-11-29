@@ -2,43 +2,37 @@
 
     <div id="app">
         
-    <v-container fill-height fluid class="my-15">
-       <v-row>
-           <v-col>
-                         
-                            <h5>{{Title}}</h5>
-                            <button type="button" class="btn-close" data-bs-dismiss="modal"
-                            aria-label="Close"></button>
-                       
+    <v-container fill-height fluid class="my-15 grey lighten-5">
+    
+     <v-row no-gutters>
+         <v-col cols="3">
+             <span class="input-group-text">Entrer le nom de Catégorie</span>
+            
+        </v-col>
 
-                        <div>
-
-                            <div class="input-group mb-3">
-                                <span class="input-group-text">Catégorie Name</span>
-                                <input type="text" class="form-control" v-model="CategorieName">
-                            </div>
-
-                            <button type="button" @click="createClick()"
-                            v-if="CategorieId==0" class="btn btn-primary">
-                            Ajouter
-                            </button>
-                            <button type="button" @click="updateClick()"
-                            v-if="CategorieId!=0" class="btn btn-primary">
-                            Mise à jour
-                            </button>
-
-                       
-                    </div>
-           </v-col>
-       </v-row>
-        
+         <v-col cols="6" >
+              <input type="text" class="form-control" v-model="CategorieName" style="width:95%">
+         </v-col>
+         
+         <v-col cols="3">    
+            <button type="button" @click="createClick()"
+                v-if="CategorieId==0" class="btn btn-primary">
+                Ajouter
+            </button>
+            <button type="button" @click="updateClick()"
+                v-if="CategorieId!=0" class="btn btn-primary">
+                Mettre à jour
+             </button>
+        </v-col>
+     </v-row>
+    
        <v-row>
             <table class="table is-fullwidth" >
             <thead>
                 <tr>
-                    <th>CatégoriesId</th>
+                    <th>N °</th>
                     <th>CatégoriesName</th>
-                    <th>Options</th>
+                    <th>Opérations</th>
                 </tr>
 
             </thead>
@@ -112,7 +106,6 @@ export default {
     },
   
     editClick(item) {
-        this.modalTitle = "Edit Catégorie";
         this.CategorieId = item.CategorieId;
         this.CategorieName = item.CategorieName;
 
@@ -184,5 +177,8 @@ th {
 
 td {
   text-align: center;
+}
+input {
+  width: 50%;
 }
 </style>
