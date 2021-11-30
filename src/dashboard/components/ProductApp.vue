@@ -10,15 +10,14 @@
          <v-col cols="6" >
 
             <v-select v-if="categories"
-              :items="categories"
-              label="Sélectionner une Catégorie"
+              v-bind:items="categories"
               v-model="SelectCategory"
-              name="category"
-              v-validate="'required'"
+              label="Sélectionner une Catégorie"
+              single-line
               item-text="CategorieName"
-              solo 
-              dark
-               
+              bottom
+              @click="getData(), getDataProducts()"
+             
             >
             </v-select>
           </v-col>
@@ -41,12 +40,17 @@
          </v-col>
       </v-row>
       <v-row>
-        <v-col >
-          <div class="p-2 w-50 bd-highlight">
+        <v-col clos=6>
+        <span>
+          Choisir l'image
+        </span>
+        </v-col>
+        <v-col cols="6" >
+         
             <img width="250px" height="250px" 
             :src="PhotoPath+PhotoFileName"/>
             <input class="m-2" type="file" @change="imageUpload">
-          </div>
+         
         </v-col>
       </v-row>
       <v-row>         
@@ -75,13 +79,13 @@
 
             </thead>
 
-            <tbody :class="{ in: getData() , in:getDataProducts()}">
+            <tbody>
                 <tr
                     v-for="item in products"
                     v-bind:key="item.ProductId"
                 >
                     <td>{{ item.ProductId }}</td>
-                    <td>{{item.Categorie}}</td>
+                    <td>{{ item.RefCategorie}}</td>
                     <td>{{ item.ProductName }}</td>
                     <td>{{ item.ProductDecrip }}</td>
                     <td>
@@ -120,7 +124,7 @@ import axios from "axios";
 
 //import parametres from './../js/ApiConnect.js'
 const API_URL = "http://127.0.0.1:8000/";
-const PHOTO_URL= API_URL+"Photos/";
+const PHOTO_URL="Photos/";
 
 export default {
   name: "ProductApp",
@@ -141,7 +145,7 @@ export default {
   },
 
   methods: {
-
+  
     getData() {
       //const url = `${API_URL}categorie/`
       //return axios.get(url)
@@ -149,6 +153,7 @@ export default {
         this.categories = response.data;
         
       });
+     
     },
     getDataProducts(){
       axios.get(API_URL + "producte").then((response) => {
@@ -162,7 +167,7 @@ export default {
   
     editClick(item) {
         this.ProductId = item.ProductId;
-        this.SelectCategory = item.Categorie;
+        this.SelectCategory = item.RefCategorie;
         this.ProductName = item.ProductName;
         this.ProductDescription = item.ProductDecrip;
         this.PhotoFileName = item.PhotoFileName;
@@ -172,7 +177,7 @@ export default {
     createClick() {
         axios.post(API_URL + "producte",{
             ProductId: this.ProductId,
-            Categorie: this.SelectCategory,
+            RefCategorie: this.SelectCategory,
             ProductName: this.ProductName,
             ProductDecrip: this.ProductDescription,
             PhotoFileName: this.PhotoFileName,
@@ -188,12 +193,12 @@ export default {
         axios.put(API_URL + "producte",{
             ProductId: this.ProductId,
             ProductName: this.ProductName,
-            Categorie: this.SelectCategory,
+            RefCategorie: this.SelectCategory,
             ProductDecrip: this.ProductDescription,
             PhotoFileName: this.PhotoFileName,
         })
         .then((response)=>{
-             this.getData();
+             this.getDataProducts();
             alert(response.data);
            
         })
@@ -205,7 +210,7 @@ export default {
         }
         axios.delete(API_URL+"producte/"+id)
         .then((response)=>{
-            this.getData();
+            this.getDataProducts();
             alert(response.data);
         });
 
@@ -214,7 +219,7 @@ export default {
         let formData=new FormData();
         formData.append('file',event.target.files[0]);
         axios.post(
-            PHOTO_URL+"producte/savefile",
+            API_URL+PHOTO_URL+"producte/savefile",
             formData)
             .then((response)=>{
                 this.PhotoFileName=response.data;

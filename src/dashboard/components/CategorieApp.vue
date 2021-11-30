@@ -2,7 +2,7 @@
 
     <div id="app">
         
-    <v-container fill-height fluid class="my-15 grey lighten-5">
+    <v-container fill-height fluid class="my-15 grey lighten-5" >
     
      <v-row no-gutters>
          <v-col cols="3">
@@ -25,7 +25,14 @@
              </button>
         </v-col>
      </v-row>
-    
+    <v-row>
+      <v-col>
+         <button type="button" @click="getData()"
+                 class="btn btn-primary">
+                Afficher les catégories
+             </button>
+      </v-col>
+    </v-row>
        <v-row>
             <table class="table is-fullwidth" >
             <thead>
@@ -36,8 +43,8 @@
                 </tr>
 
             </thead>
-
-            <tbody :class="{ in: getData() }">
+          
+            <tbody>
                 <tr
                     v-for="item in categories"
                     v-bind:key="item.CategorieId"
