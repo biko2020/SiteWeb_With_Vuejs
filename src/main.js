@@ -18,10 +18,6 @@ Vue.use(SequentialEntrance);
 
 Vue.config.productionTip = false
 
-import vSelect from "vue-select";
-Vue.component("v-select", vSelect);
-import "vue-select/dist/vue-select.css";
-
 
 axios.defaults.baseURL ='http://127.0.0.1:8000/'
 

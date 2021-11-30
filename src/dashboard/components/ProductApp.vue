@@ -9,14 +9,19 @@
         </v-col>
          <v-col cols="6" >
 
-        <v-select :options="categories">
-        
-        
-      </v-select>
-     
-
- 
-         </v-col>
+            <v-select v-if="categories"
+              :items="categories"
+              label="Sélectionner une Catégorie"
+              v-model="SelectCategory"
+              name="category"
+              v-validate="'required'"
+              item-text="CategorieName"
+              solo 
+              dark
+               
+            >
+            </v-select>
+          </v-col>
 
     </v-row>
      <v-row no-gutters>
@@ -24,10 +29,28 @@
              <span class="input-group-text">Entrer le nom de Produit</span>      
         </v-col>
          <v-col cols="6" >
-              <input type="text" class="form-control" v-model="ProductIdName" style="width:95%">
+              <input type="text" class="form-control" v-model="ProductName" style="width:95%">
          </v-col>
-         
-         <v-col cols="3">    
+      </v-row>
+      <v-row>
+        <v-col cols="3">
+             <span class="input-group-text">Déscription de Produit</span>      
+        </v-col>
+         <v-col cols="6" >
+              <input type="text" class="form-control" v-model="ProductDescription" style="width:95%">
+         </v-col>
+      </v-row>
+      <v-row>
+        <v-col >
+          <div class="p-2 w-50 bd-highlight">
+            <img width="250px" height="250px" 
+            :src="PhotoPath+PhotoFileName"/>
+            <input class="m-2" type="file" @change="imageUpload">
+          </div>
+        </v-col>
+      </v-row>
+      <v-row>         
+         <v-col cols="3" align="right">    
             <button type="button" @click="createClick()"
                 v-if="ProductId==0" class="btn btn-primary">
                 Ajouter
@@ -43,8 +66,8 @@
             <table class="table is-fullwidth" >
             <thead>
                 <tr>
-                    <th>N °</th>
-                    <th>catégorie</th>
+                    <th>N° Produit</th>
+                    <th>Catégorie</th>
                     <th>Name de Produit</th>
                     <th>Description</th>
                     <th>Opérations</th>
@@ -52,7 +75,7 @@
 
             </thead>
 
-            <tbody :class="{ in: getData() }">
+            <tbody :class="{ in: getData() , in:getDataProducts()}">
                 <tr
                     v-for="item in products"
                     v-bind:key="item.ProductId"
@@ -97,6 +120,7 @@ import axios from "axios";
 
 //import parametres from './../js/ApiConnect.js'
 const API_URL = "http://127.0.0.1:8000/";
+const PHOTO_URL= API_URL+"Photos/";
 
 export default {
   name: "ProductApp",
@@ -104,11 +128,14 @@ export default {
   data() {
     return {
       categories:[], 
-       
+      SelectCategory:"", 
       products: [],
       Title:"",
       ProductId: 0,
       ProductName: "",
+      ProductDescription:"",
+      PhotoFileName:"pic.png",
+      PhotoPath:PHOTO_URL,
      
     };
   },
@@ -120,21 +147,36 @@ export default {
       //return axios.get(url)
       axios.get(API_URL + "categorie").then((response) => {
         this.categories = response.data;
+        
+      });
+    },
+    getDataProducts(){
+      axios.get(API_URL + "producte").then((response) => {
+        this.products = response.data;
       });
     },
     mounted: function () {
       this.getData();
+      this.getDataProducts();
     },
   
     editClick(item) {
-         this.ProductId = item.ProductId;
+        this.ProductId = item.ProductId;
+        this.SelectCategory = item.Categorie;
         this.ProductName = item.ProductName;
+        this.ProductDescription = item.ProductDecrip;
+        this.PhotoFileName = item.PhotoFileName;
 
     },
 
     createClick() {
         axios.post(API_URL + "producte",{
-            ProductName: this.ProductName
+            ProductId: this.ProductId,
+            Categorie: this.SelectCategory,
+            ProductName: this.ProductName,
+            ProductDecrip: this.ProductDescription,
+            PhotoFileName: this.PhotoFileName,
+
         })
         .then((response)=>{
              this.getData();
@@ -146,6 +188,9 @@ export default {
         axios.put(API_URL + "producte",{
             ProductId: this.ProductId,
             ProductName: this.ProductName,
+            Categorie: this.SelectCategory,
+            ProductDecrip: this.ProductDescription,
+            PhotoFileName: this.PhotoFileName,
         })
         .then((response)=>{
              this.getData();
@@ -165,6 +210,16 @@ export default {
         });
 
     },
+       imageUpload(event){
+        let formData=new FormData();
+        formData.append('file',event.target.files[0]);
+        axios.post(
+            PHOTO_URL+"producte/savefile",
+            formData)
+            .then((response)=>{
+                this.PhotoFileName=response.data;
+            });
+    }
 
   },
   
