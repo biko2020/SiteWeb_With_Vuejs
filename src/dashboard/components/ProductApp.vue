@@ -133,7 +133,7 @@
                 <!-- **** fonction delete **** -->
                 <button
                   type="button"
-                  @click="deleteClick(item.CategorieId)"
+                  @click="deleteClick(item.ProductId)"
                   class="btn btn-light mr-1"
                 >
                   <svg
@@ -241,7 +241,8 @@ export default {
       if (!confirm("Are you sure?")) {
         return;
       }
-      axios.delete(API_URL + "producte/" + id).then((response) => {
+      axios.delete(API_URL+"producte/"+id)
+      .then((response) => {
         this.getDataProducts();
         alert(response.data);
       });
