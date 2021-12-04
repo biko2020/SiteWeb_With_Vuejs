@@ -44,13 +44,15 @@
         <span>
           Choisir l'image
         </span>
+
         </v-col>
         <v-col cols="6" >
          
-            <img width="250px" height="250px" 
-            :src="PhotoPath+PhotoFileName"/>
-            <input class="m-2" type="file" @change="imageUpload">
-         
+            <img width="250px" height="250px"
+                :src="PhotoPath+PhotoFileName"/>
+            <input :v-bind="value" type="file" name="uploadFile" @change="imageUpload">
+            
+       
         </v-col>
       </v-row>
       <v-row>         
@@ -119,12 +121,9 @@
 
 <script>
 import axios from "axios";
-
-
-
-//import parametres from './../js/ApiConnect.js'
+//import * as getApi from "../js/ApiConnect.js";
 const API_URL = "http://127.0.0.1:8000/";
-const PHOTO_URL="Photos/";
+const PHOTO_URL= "http://127.0.0.1:8000/Photos/";
 
 export default {
   name: "ProductApp",
@@ -138,31 +137,31 @@ export default {
       ProductId: 0,
       ProductName: "",
       ProductDescription:"",
-      PhotoFileName:"pic.png",
+      PhotoFileName:"",
       PhotoPath:PHOTO_URL,
+      
+   
      
     };
   },
 
   methods: {
-  
+    
     getData() {
       //const url = `${API_URL}categorie/`
       //return axios.get(url)
-      axios.get(API_URL + "categorie").then((response) => {
+      axios.get(API_URL + "categorie")
+      .then((response) => {
         this.categories = response.data;
         
       });
      
     },
     getDataProducts(){
-      axios.get(API_URL + "producte").then((response) => {
+      axios.get(API_URL + "producte")
+      .then((response) => {
         this.products = response.data;
       });
-    },
-    mounted: function () {
-      this.getData();
-      this.getDataProducts();
     },
   
     editClick(item) {
@@ -215,18 +214,35 @@ export default {
         });
 
     },
-       imageUpload(event){
-        let formData=new FormData();
-        formData.append('file',event.target.files[0]);
+ //function to upload images
+
+    imageUpload(event){
+       
+        let formData = new FormData();
+        formData.append('uploadFile',event.target.files[0]);
         axios.post(
-            API_URL+PHOTO_URL+"producte/savefile",
-            formData)
+            API_URL+"producte/saveImage",
+             formData
+            ,{
+                headers: {
+                       'Content-Type': 'multipart/form-data',
+                      //'enctype': 'multipart/form-data'
+                }
+             }
+            )
             .then((response)=>{
                 this.PhotoFileName=response.data;
+                console.log(this.PhotoFileName)
             });
-    }
+    },
 
-  },
+       mounted: function () {
+      this.getData();
+      this.getDataProducts();
+      this.imageUpload();
+    },
+
+},
   
 };
 </script>
