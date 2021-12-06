@@ -12,8 +12,16 @@
             label="Sélectionner une Catégorie"
             single-line
             item-text="CategorieName"
+            item-value="CategorieId"
+            return-object 
             bottom
-            @click="getData(), getDataProducts()"
+            @click="getDataCategorie"
+            @input="getFilterProducts(`${SelectCategory.CategorieName}`)"
+            :hint="`${SelectCategory.CategorieName}`"
+        
+           
+            
+            
           >
           </v-select>
         <!--  ******* --------------------------------***** -->  
@@ -66,7 +74,7 @@
         <v-col cols="3" align="right">
           <button
             type="button"
-            @click="createClick()"
+            @click="createClick"
             v-if="ProductId == 0"
             class="btn btn-primary"
           >
@@ -75,7 +83,7 @@
           </button>
           <button
             type="button"
-            @click="updateClick()"
+            @click="updateClick"
             v-if="ProductId != 0"
             class="btn btn-primary"
           >
@@ -99,7 +107,7 @@
           </thead>
 
           <tbody>
-            <!-- **** boucle  de chargement des enregistrements Produits depuis la db **** -->
+            <!-- **** boucle recuperer des enregistrements Produits depuis la db **** -->
             <tr v-for="item in products" v-bind:key="item.ProductId">
               <td>{{ item.ProductId }}</td>
               <td>{{ item.RefCategorie }}</td>
@@ -172,8 +180,9 @@ export default {
     return {
       categories: [],
       SelectCategory: "",
+      //valeur:0,
       products: [],
-      Title: "",
+      //Title: "",
       ProductId: 0,
       ProductName: "",
       ProductDescription: "",
@@ -184,18 +193,28 @@ export default {
 
   methods: {
     // ***** fonction recuperer les categories
-    getData() {
+    getDataCategorie() {
       //const url = `${API_URL}categorie/`
       //return axios.get(url)
       axios.get(API_URL + "categorie").then((response) => {
         this.categories = response.data;
       });
     },
-    // ***** fonction recuperer les produits
-    getDataProducts() {
-      axios.get(API_URL + "producte").then((response) => {
+    // ***** fonction recuperer la liste des produits
+    // getAllProducts() {
+    //   axios.get(API_URL + "producte").then((response) => {
+
+    //     this.products = response.data;
+    //   });
+    // },
+    // **** function filtrer les produits d'une catégorie
+
+    getFilterProducts(getSelectCatory){
+
+      axios.get(API_URL + `producte/${getSelectCatory}`)
+     .then((response) => {
         this.products = response.data;
-      });
+     });
     },
    // ***** fonction d'edition des enregistrements
     editClick(item) {
@@ -217,7 +236,7 @@ export default {
           PhotoFileName: this.PhotoFileName,
         })
         .then((response) => {
-          this.getData();
+          this.getDataCategorie;
           alert(response.data);
         });
     },
@@ -232,7 +251,7 @@ export default {
           PhotoFileName: this.PhotoFileName,
         })
         .then((response) => {
-          this.getDataProducts();
+          this.getDataProducts;
           alert(response.data);
         });
     },
@@ -241,11 +260,12 @@ export default {
       if (!confirm("Are you sure?")) {
         return;
       }
-      axios.delete(API_URL+"producte/"+id)
+      axios.delete(API_URL + "producte/" + id)
       .then((response) => {
-        this.getDataProducts();
+        this.getDataProducts;
         alert(response.data);
       });
+      
     },
 
     // ***** fonction de telechargement de l'images
@@ -266,10 +286,11 @@ export default {
         });
     },
 
-    mounted: function () {
-      this.getData();
-      this.getDataProducts();
-      this.imageUpload();
+      mounted: function () {
+      this.getDataCategorie;
+     // this.getAllProducts;
+      this.getFilterProducts;
+      this.imageUpload;
     },
   },
 };
