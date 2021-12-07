@@ -18,9 +18,6 @@
             @click="getDataCategorie"
             @input="getFilterProducts(`${SelectCategory.CategorieName}`)"
             :hint="`${SelectCategory.CategorieName}`"
-        
-           
-            
             
           >
           </v-select>
@@ -255,7 +252,7 @@ export default {
           alert(response.data);
         });
     },
-  // ***** fonction supprimer des enregistrements
+   // ***** fonction supprimer des enregistrements
     deleteClick(id) {
       if (!confirm("Are you sure?")) {
         return;
@@ -282,17 +279,16 @@ export default {
         })
         .then((response) => {
           this.PhotoFileName = response.data;
-          console.log(this.PhotoFileName);
+          //console.log(this.PhotoFileName);
         });
     },
-
-      mounted: function () {
-      this.getDataCategorie;
-     // this.getAllProducts;
-      this.getFilterProducts;
-      this.imageUpload;
-    },
   },
+       mounted: function () {
+      this.getDataCategorie();
+     // this.getAllProducts;
+      this.getFilterProducts();
+      this.imageUpload();
+    },
 };
 </script>
 
