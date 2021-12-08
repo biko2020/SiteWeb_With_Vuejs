@@ -11,14 +11,15 @@
         </v-col>
       </v-row>
 
-      <!--  ************* Debut Bloc Menu  de Categories*******************   -->
+      <!--  ************* Debut Bloc Menu de Categories*******************   -->
      
       <v-row class="row text-center pt-md-5 aos-init aos-animate" >
         <div class="justify-center" >
           <v-chip v-for="item in Categories" v-bind:key="item.CategorieId" 
             style="width:367px "
-            @click="activeDomaine = item.CategorieName,
-            getFilterProducts(item.CategorieName)"
+            @click="activeDomaine = item.CategorieName
+            ,getFilterProducts(item.CategorieName)
+            ,Upload_Image_Product"
             :color="activeDomaine === item.CategorieName ? 'success' : ''"
             class="mx-5 my-5 justify-center"
             >{{item.CategorieName}}</v-chip
@@ -26,23 +27,26 @@
   
         </div>
       </v-row>
-
+      
       <!--  ************* Fin Bloc Menu *******************   -->
 
       <v-row justify="center">
 
         <!--  ******** Slot Produits *********  -->
 
-        <slot v-if="activeDomaine">
+        <slot v-if="activeDomaine" >
           <v-col lg="4" v-for="produit in Produits" v-bind:key="produit.ProductId">
-            <v-card class="mx-auto my-12" max-width="374" style="height: 500px">
-              <v-img
+          
+            <v-card class="mx-auto my-12" max-width="374" style="height: 500px" >
+              <v-img 
+               
                 height="250"
-                :src="produit.PhotoFileName"
+                :src="PhotoPath + produit.PhotoFileName"
                 gradient="to bottom, rgba(0,0,0,.1), rgba(0,0,0,.5)"
+                
               >
               </v-img>
-
+             
               <v-card-title>{{produit.ProductName }}</v-card-title>
 
               <v-card-text>
@@ -96,7 +100,7 @@ import Modal from "@/components/Modal.vue";
 import axios from "axios";
 
 const API_URL = "http://127.0.0.1:8000/";
-//const PHOTO_URL = "http://127.0.0.1:8000/Photos/";
+const PHOTO_URL = "http://127.0.0.1:8000/Photos/";
 
 export default {
   name: "ProductsApp",
@@ -111,6 +115,8 @@ export default {
       Categories: [],
       Produits: [],
       activeDomaine:"",
+      PhotoPath:PHOTO_URL,
+      PhotoFileName:"",
 
 
     };
@@ -127,13 +133,22 @@ export default {
        });
     },
    
-   // ---* fonction pour récupérer la liste des produits
+   // ---* fonction pour filtrer la liste des produits par catégorie
    getFilterProducts(ref_categorie) {
       axios.get(API_URL + `producte/${ref_categorie}`)
       .then((response) => {
+       
         this.Produits = response.data;
+        
       })
   },
+
+  // ---* fonction chargement de l'image du produit
+  Upload_Image_Product(produit){
+    
+    this.PhotoFileName = produit.PhotoFileName;
+      
+  }
 
  },
 
@@ -142,6 +157,7 @@ export default {
   mounted: function(){
     this.getCategories();
     this.getFilterProducts();
+    this.Upload_Image_Product;
     
   }, 
 };
