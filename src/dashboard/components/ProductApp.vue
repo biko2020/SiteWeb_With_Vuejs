@@ -4,7 +4,7 @@
       <v-row no-gutters>
         <v-col cols="3"> </v-col>
         <v-col cols="6">
-        <!-- ***** *** chargement des categories **********-->
+          <!-- ***** *** chargement des categories **********-->
           <v-select
             v-if="categories"
             v-bind:items="categories"
@@ -13,15 +13,14 @@
             single-line
             item-text="CategorieName"
             item-value="CategorieId"
-            return-object 
+            return-object
             bottom
             @click="getDataCategorie"
             @input="getFilterProducts(`${SelectCategory.CategorieName}`)"
             :hint="`${SelectCategory.CategorieName}`"
-            
           >
           </v-select>
-        <!--  ******* --------------------------------***** -->  
+          <!--  ******* --------------------------------***** -->
         </v-col>
       </v-row>
       <v-row no-gutters>
@@ -63,35 +62,34 @@
             name="uploadFile"
             @change="imageUpload"
           />
-        <!--  ******* --------------------------------***** -->
+          <!--  ******* --------------------------------***** -->
         </v-col>
       </v-row>
       <v-row>
-      <!--  ******* appel de la fonction Ajouter / Mettre à jour l'enregistrement ***** -->
+        <!--  ******* appel de la fonction Ajouter / Mettre à jour l'enregistrement ***** -->
         <v-col cols="3" align="right">
           <button
             type="button"
-            @click="createClick"
+            @click="create_Function()"
             v-if="ProductId == 0"
             class="btn btn-primary"
           >
             Ajouter
-           
           </button>
           <button
             type="button"
-            @click="updateClick"
+            @click="update_Function()"
             v-if="ProductId != 0"
             class="btn btn-primary"
           >
             Mettre à jour
           </button>
-      <!--  ******* __________________________###############______________________ **** -->              
+          <!--  ******* __________________________###############______________________ **** -->
         </v-col>
       </v-row>
 
       <v-row>
-      <!--  ************** affichage des enregistrements sur la table  ****************   -->
+        <!--  ************** affichage des enregistrements sur la table  ****************   -->
         <table class="table is-fullwidth">
           <thead>
             <tr>
@@ -111,11 +109,11 @@
               <td>{{ item.ProductName }}</td>
               <td>{{ item.ProductDecrip }}</td>
               <td>
-               <!-- **** fonction Etide **** -->
+                <!-- **** fonction Edite **** -->
                 <button
                   type="button"
                   class="btn btn-light mr-1"
-                  @click="editClick(item)"
+                  @click="edit_Function(item)"
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -138,7 +136,7 @@
                 <!-- **** fonction delete **** -->
                 <button
                   type="button"
-                  @click="deleteClick(item.ProductId)"
+                  @click="delete_Function(item.ProductId)"
                   class="btn btn-light mr-1"
                 >
                   <svg
@@ -158,7 +156,7 @@
             </tr>
           </tbody>
         </table>
-       <!--  ************** ___________fin de la table______________  ****************   -->
+        <!--  ************** ___________fin de la table______________  ****************   -->
       </v-row>
     </v-container>
   </div>
@@ -166,7 +164,6 @@
 
 <script>
 import axios from "axios";
-//import * as getApi from "../js/ApiConnect.js";
 const API_URL = "http://127.0.0.1:8000/";
 const PHOTO_URL = "http://127.0.0.1:8000/Photos/";
 
@@ -177,68 +174,60 @@ export default {
     return {
       categories: [],
       SelectCategory: "",
-      //valeur:0,
       products: [],
-      //Title: "",
       ProductId: 0,
       ProductName: "",
       ProductDescription: "",
-      PhotoFileName: "",
+      PhotoFileName: "logo.png",
       PhotoPath: PHOTO_URL,
     };
   },
 
   methods: {
-    // ***** fonction recuperer les categories
+    // **** Recuperer la liste des categories
+
     getDataCategorie() {
-      //const url = `${API_URL}categorie/`
-      //return axios.get(url)
       axios.get(API_URL + "categorie").then((response) => {
         this.categories = response.data;
       });
     },
-    // ***** fonction recuperer la liste des produits
-    // getAllProducts() {
-    //   axios.get(API_URL + "producte").then((response) => {
 
-    //     this.products = response.data;
-    //   });
-    // },
-    // **** function filtrer les produits d'une catégorie
+    // ****  filtrer les produits par catégorie
 
-    getFilterProducts(getSelectCatory){
-
-      axios.get(API_URL + `producte/${getSelectCatory}`)
-     .then((response) => {
+    getFilterProducts(getSelectCatory) {
+      axios.get(API_URL + `producte/${getSelectCatory}`).then((response) => {
         this.products = response.data;
-     });
+        console.log("************ :", getSelectCatory);
+      });
     },
-   // ***** fonction d'edition des enregistrements
-    editClick(item) {
+
+    // **** Edition des enregistrements
+
+    edit_Function(item) {
       this.ProductId = item.ProductId;
       this.SelectCategory = item.RefCategorie;
       this.ProductName = item.ProductName;
       this.ProductDescription = item.ProductDecrip;
       this.PhotoFileName = item.PhotoFileName;
     },
-   
-   // ***** fonction ajouter les enregistrements a la base
-    createClick() {
+
+    // **** Ajouter les enregistrements
+    create_Function() {
       axios
         .post(API_URL + "producte", {
-          ProductId: this.ProductId,
-          RefCategorie: this.SelectCategory,
+          RefCategorie: this.SelectCategory.CategorieName,
           ProductName: this.ProductName,
           ProductDecrip: this.ProductDescription,
           PhotoFileName: this.PhotoFileName,
         })
         .then((response) => {
-          this.getDataCategorie;
           alert(response.data);
         });
     },
-    // ***** fonction modification des enregistrements
-    updateClick() {
+
+    // **** Modification des enregistrements
+
+    update_Function() {
       axios
         .put(API_URL + "producte", {
           ProductId: this.ProductId,
@@ -248,24 +237,21 @@ export default {
           PhotoFileName: this.PhotoFileName,
         })
         .then((response) => {
-          this.getDataProducts;
           alert(response.data);
         });
     },
-   // ***** fonction supprimer des enregistrements
-    deleteClick(id) {
-      if (!confirm("Are you sure?")) {
+    // **** Suppression des enregistrements
+
+    delete_Function(id) {
+      if (!confirm("Êtes-vous sûr de vouloir supprimer ce fichier ?")) {
         return;
       }
-      axios.delete(API_URL + "producte/" + id)
-      .then((response) => {
-        this.getDataProducts;
+      axios.delete(API_URL + "producte/" + id).then((response) => {
         alert(response.data);
       });
-      
     },
 
-    // ***** fonction de telechargement de l'images
+    // ****  Télechargement de l'images
 
     imageUpload(event) {
       let formData = new FormData();
@@ -283,12 +269,11 @@ export default {
         });
     },
   },
-       mounted: function () {
-      this.getDataCategorie();
-     // this.getAllProducts;
-      this.getFilterProducts();
-      this.imageUpload();
-    },
+  mounted: function () {
+    this.getDataCategorie();
+    this.getFilterProducts();
+    this.imageUpload();
+  },
 };
 </script>
 
